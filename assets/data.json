@@ -1,0 +1,62 @@
+[
+    {
+        "type": "title",
+        "content": "Welcome to the Dynamic Page"
+    },
+    {
+        "type": "paragraph",
+        "content": "This paragraph demonstrates how JSON content can be styled using Bootstrap."
+    },
+    {
+        "type": "code",
+        "content": "const example = 'This is a Bootstrap styled code block';\nconsole.log(example);"
+    },
+    {
+        "type": "list",
+        "content": ["Bootstrap makes styling easy", "JSON makes it dynamic", "JavaScript ties it all together"]
+    },
+    {
+        "type": "paragraph",
+        "content": "Add more items to the JSON file to see them rendered here."
+    },
+    {
+        "type": "title",
+        "content": "Welcome to the Dynamic Page"
+    },
+    {
+        "type": "paragraph",
+        "content": "This paragraph demonstrates how JSON content can be styled using Bootstrap."
+    },
+    {
+        "type": "code",
+        "content": "const example = 'This is a Bootstrap styled code block';\nconsole.log(example);"
+    },
+    {
+        "type": "list",
+        "content": ["Bootstrap makes styling easy", "JSON makes it dynamic", "JavaScript ties it all together"]
+    },
+    {
+        "type": "paragraph",
+        "content": "Add more items to the JSON file to see them rendered here."
+    },
+    {
+        "type": "title",
+        "content": "mirenme"
+    },
+    {
+        "type": "paragraph",
+        "content": "This paragraph demonstrates how JSON content can be styled using Bootstrap."
+    },
+    {
+        "type": "code",
+        "content": "const example = 'This is a Bootstrap styled code block';\nconsole.log(example);"
+    },
+    {
+        "type": "list",
+        "content": ["Bootstrap makes styling easy", "JSON makes it dynamic", "JavaScript ties it all together"]
+    },
+    {
+        "type": "paragraph",
+        "content": "Add more items to the JSON file to see them rendered here."
+    }
+]
