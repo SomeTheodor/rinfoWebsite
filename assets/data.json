@@ -1,19 +1,35 @@
 [
     {
         "type": "title",
-        "content": "Welcome to the Dynamic Page"
+        "content": "Introduccion"
     },
     {
         "type": "paragraph",
-        "content": "This paragraph demonstrates how JSON content can be styled using Bootstrap."
+        "content": "Esta pagina fue diseñada para ayudar en el desarrollo de los futuros ingresantes y personas que esten interesadas en la codificacion y en el cual poder aprender sobre la programacion concurrente. "
+    },
+    {
+        "type": "title",
+        "content": "Que es R-Info"
+    },
+    {
+        "type": "paragraph",
+        "content": "R-Info es un entorno de programacion donde se aprende conceptos basicos sobre como se constituye un programa y como se escribe uno, esto lo hace de manera sencilla ( con instrucciones y datos elementales o basicos en idioma español ) y didacticamente al ser un robot o varios, ubicado dentro de un mapa, el que realiza el algoritmo creado por programador. \n Este entorno ofrece la posibilidad de ademas de aprender lo ya mencionado tambien tiene la capacidad de trabajar con el paradigma de programacion concurrente ya que puede coexistir mas de un robot en el mismo mapa de manera que el programa tendra que estar preparado para esto si se usa mas de un robot. \n Sobre el mapa donde interactuan los robots este es una matriz de 100 filas y 100 columnas que simula una ciudad, llamandoce calles a las filas y avenidas a las columnas. El extremo inferior izquierdo es la avenida 1, calle 1 y el extremo superior derecho es la avenida 100, calle 100"
+    },
+    {
+        "type": "title",
+        "content": "Estructura del programa"
+    },
+    {
+        "type": "paragraph",
+        "content": "La estructuda del programa consiste en:"
     },
     {
         "type": "code",
-        "content": "const example = 'This is a Bootstrap styled code block';\nconsole.log(example);"
+        "content": "programa\n\nprocesos(opcional)\n\nareas\n\nrobots\n\nvariables\n\ncomenzar\n\nfin"
     },
     {
         "type": "list",
-        "content": ["Bootstrap makes styling easy", "JSON makes it dynamic", "JavaScript ties it all together"]
+        "content": ["Programa\n\n Es donde se le da el nombre al", "JSON makes it dynamic", "JavaScript ties it all together"]
     },
     {
         "type": "paragraph",
@@ -58,5 +74,38 @@
     {
         "type": "paragraph",
         "content": "Add more items to the JSON file to see them rendered here."
+    },
+    {
+        "type": "subtitle",
+        "content": "Add more items to the JSON file to see them rendered here."   
+    },
+    {
+        "type": "subtitle",
+        "content": "Add more items to the JSON file to see them rendered here."   
+    },
+    {
+        "type": "subtitle",
+        "content": "Add more items to the JSON file to see them rendered here."   
+    },{
+        "type": "subtitle",
+        "content": "Add more items to the JSON file to see them rendered here."   
+    },{
+        "type": "subtitle",
+        "content": "Add more items to the JSON file to see them rendered here."   
+    },{
+        "type": "subtitle",
+        "content": "Add more items to the JSON file to see them rendered here."   
+    },{
+        "type": "subtitle",
+        "content": "Add more items to the JSON file to see them rendered here."   
+    },{
+        "type": "subtitle",
+        "content": "Add more items to the JSON file to see them rendered here."   
+    },{
+        "type": "subtitle",
+        "content": "Add more items to the JSON file to see them rendered here."   
+    },{
+        "type": "subtitle",
+        "content": "Add more items to the JSON file to see them rendered here."   
     }
 ]

@@ -8,6 +8,38 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/rinfo_no_name.png">
     <link rel="stylesheet" src="/css/style.css" type="text/css">
+    <style>
+    #hero{
+      height: 100vh; 
+      background: linear-gradient(to right, #262626da, #262626da), url('/images/rinfo2.png'); 
+      color: #ffffff;
+    }
+    footer {
+      background-color: #efefef;
+    }
+
+    /* Estilos de iconos */
+    .social-icon i {
+        font-size: 1.5rem;
+        transition: color 0.3s ease-in-out;
+        color: rgb(0, 0, 0);
+    }
+
+    /* Efecto hover: azul */
+    .blue:hover i {
+        color: #007bff;
+    }
+
+    /* Efecto clic: rojo */
+    .red:hover i {
+        color: #dc3545;
+    }
+
+    /* Espaciado uniforme en botones */
+    .social-icon {
+        padding: 10px;
+    }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm" >
@@ -26,7 +58,15 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link mx-2 text-white" href="downloads/r-Info3.1.jar">Descargar</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mx-2 text-white" href="#" id="downloadDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Descargar
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="downloadDropdown">
+                      <li><a class="dropdown-item" href="assets/r-Info3.1.jar">Windows</a></li>
+                      <li><a class="dropdown-item" href="assets/Rinfo-2.8-linux.jar">Linux</a></li>
+                  </ul>
+                </li>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mx-2 text-white" href="document.html">Documentación</a>
@@ -36,24 +76,33 @@
           </div>
         </div>
     </nav>
-    <section id="hero" class="d-flex align-items-center justify-content-center text-center" style="min-height: 100vh; background: linear-gradient(to right, #262626da, #262626da), url('/images/rinfo2.png'); color: white;">
-        <div class="container">
+    <section id="hero" class="d-flex align-items-center justify-content-center text-center">
+      <div class="container">
           <h1 class="display-4 fw-bold">
-            Comienza con R-Info
+              Comienza con R-Info
           </h1>
           <p class="lead mb-4">
-            Aprende a programar, domina las bases y da tus primeros pasos en el desarrollo
+              Aprende a programar, domina las bases y da tus primeros pasos en el desarrollo
           </p>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-light btn-lg px-4 gap-3">
-              Descargar
-            </button>
-            <button type="button" class="btn btn-outline-light btn-lg px-4 gap-3">
-              Documentación
-            </button>
+          <div class="d-flex justify-content-center gap-2 flex-wrap">
+              <div class="dropdown">
+                  <a class="btn btn-primary btn-lg px-4 mx-2 text-white dropdown-toggle" 
+                     href="#" 
+                     id="downloadDropdown" 
+                     role="button" 
+                     data-bs-toggle="dropdown" 
+                     aria-expanded="false">
+                     Descargar
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="downloadDropdown">
+                      <li><a class="dropdown-item" href="assets/r-Info3.1.jar">Windows</a></li>
+                      <li><a class="dropdown-item" href="assets/Rinfo-2.8-linux.jar">Linux</a></li>
+                  </ul>
+              </div>
+              <a href="document.html" class="btn btn-danger btn-lg px-4 mx-2">Documentación</a>
           </div>
-        </div>
-      </section>
+      </div>
+  </section>
       
     <section id="about" class="container">
         <div class="container col-xxl-8 px-4 py-5">
@@ -70,9 +119,15 @@
                 <p class="lead fw-semi-bold">
                     R-Info es un lenguaje de programación innovador, diseñado especialmente para quienes desean comenzar a explorar el mundo de la programación de manera sencilla. Si estás buscando un lenguaje que te ofrezca una curva de aprendizaje accesible, R-Info es la opción ideal.
                 </p>
-              <div class="d-grid gap-2 d-md-flex ">
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Descargar</button>
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Documentacion</button>
+              <div class=" d-md-flex ">
+                <a class="btn btn-primary btn-lg px-4 gap-3 dropdown-toggle mx-2 text-white" href="#" id="downloadDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Descargar
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="downloadDropdown">
+                  <li><a class="dropdown-item" href="assets/r-Info3.1.jar">Windows</a></li>
+                  <li><a class="dropdown-item" href="assets/Rinfo-2.8-linux.jar">Linux</a></li>
+              </ul>
+                <a href="document.html" class="btn btn-danger btn-lg px-4 gap-3">Documentacion</a>
               </div>
             </div>
           </div>
@@ -84,7 +139,7 @@
           <div class="col d-flex flex-column align-items-center text-center gap-2">
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Disfruta de sus características</h1>
             <p class="lead fw-semi-bold">Explora y aprovecha al máximo todas las increíbles características que ofrece R-Info especialmente para ti</p>
-            <a class="btn btn-primary btn-lg px-4 gap-3">Documentación</a>
+            <a href="document.html" class="btn btn-danger btn-lg px-4 gap-3">Documentación</a>
           </div>
           <div class="col">
             <div class="row row-cols-1 row-cols-sm-2 g-4">
@@ -137,9 +192,9 @@
           <p class="lead fw-semi-bold">Busca respuestas a tus preguntas</p>
         </div>
       
-        <div class="accordion my-4" id="faqAccordion">
+        <div class="accordion " id="faqAccordion">
           <!-- Primer elemento del acordeón -->
-          <div class="accordion-item border rounded shadow-sm mb-3">
+          <div class="accordion-item border rounded  ">
             <h2 class="accordion-header" id="faq1-heading">
               <button 
                 class="accordion-button fw-semibold" 
@@ -160,7 +215,7 @@
           </div>
         
           <!-- Segundo elemento del acordeón -->
-          <div class="accordion-item border rounded shadow-sm mb-3">
+          <div class="accordion-item border rounded ">
             <h2 class="accordion-header" id="faq2-heading">
               <button 
                 class="accordion-button fw-semibold collapsed" 
@@ -181,7 +236,7 @@
           </div>
         
           <!-- Tercer elemento del acordeón -->
-          <div class="accordion-item border rounded shadow-sm">
+          <div class="accordion-item border rounded">
             <h2 class="accordion-header" id="faq3-heading">
               <button 
                 class="accordion-button fw-semibold collapsed" 
@@ -205,31 +260,32 @@
       </section>
       <footer class="text-white" >
         <div class="container py-4">
-          <div class="row align-items-center">
-            <!-- Imagen -->
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              <img src="/images/rinfo2.png" alt="" class="img-fluid rounded" style="max-height: 100px;">
+            <div class="row align-items-center">
+                <!-- Imagen -->
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <img src="/images/rinfo2.png" alt="" class="img-fluid rounded" style="max-height: 100px;">
+                </div>
+                <!-- Redes Sociales -->
+                <div class="col-md-6 text-center text-md-end">
+                    <a class="btn btn-floating m-1 social-icon blue" href="https://www.facebook.com/InfoUNLP/?locale=es_LA">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a class="btn btn-floating m-1 social-icon red" href="https://www.instagram.com/informaticaunlp/?hl=es">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a class="btn btn-floating m-1 social-icon blue" href="https://github.com">
+                        <i class="bi bi-envelope-at"></i>
+                    </a>
+                </div>
             </div>
-            <!-- Redes Sociales -->
-            <div class="col-md-6 text-center text-md-end">
-              <a class="btn  btn-floating m-1" href="https://www.facebook.com/InfoUNLP/?locale=es_LA" role="button">
-                <i class="bi bi-facebook"></i>
-              </a>
-              <a class="btn  btn-floating m-1" href="https://www.instagram.com/informaticaunlp/?hl=es" role="button">
-                <i class="bi bi-instagram"></i>
-              </a>
-              <a class="btn  btn-floating m-1" href="https://github.com" role="button">
-                <i class="bi bi-envelope-at"></i>
-              </a>
+            <!-- Copyright -->
+            <div class="text-center pt-3 text-black">
+                © 2025 Copyright:
+                <a class="text-black" href="https://www.info.unlp.edu.ar/">UNLP Facultad de Informática</a>
             </div>
-          </div>
-          <!-- Copyright -->
-          <div class="text-center pt-3 text-black" >
-            © 2025 Copyright:
-            <a class="text-black" href="https://www.info.unlp.edu.ar/">UNLP Facultad de Informatica</a>
-          </div>
         </div>
-      </footer>
+    </footer>
+    
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
