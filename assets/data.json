@@ -3,36 +3,14 @@
         "type": "title",
         "content": "Que es R-Info?",
         "elements": [
-            { "type": "paragraph", "content": "R-Info es un entorno de programacion donde se aprende conceptos basicos sobre como se constituye un programa y como se escribe uno, esto lo hace de manera sencilla ( con instrucciones y datos elementales o basicos en idioma español ) y didacticamente al ser un robot o varios, ubicado dentro de un mapa, el que realiza el algoritmo creado por programador" },
-            { "type": "code", "content": "console.log('Hello, Main Title!');" },
-            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
-            ],
-            "subtitles": [
-            {
-                "type": "subtitle",
-                "content": "Subtitle 1",
-                "elements": [
-                    { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
-                    { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
-                    { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
-                ]
-            },
-            {
-                "type": "subtitle",
-                "content": "Subtitle 2",
-                "elements": [
-                    { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
-                ]
-            }
+            { "type": "paragraph", "content": "R-Info es un entorno de programacion donde se aprende conceptos basicos sobre como se constituye un programa y como se escribe uno, esto lo hace de manera sencilla ( con instrucciones y datos elementales o basicos en idioma español ) y didacticamente al ser un robot o varios, ubicado dentro de un mapa, el que realiza el algoritmo creado por programador" }
         ]
     },
     {
         "type": "title",
         "content": "Tipos de datos",
         "elements": [
-            { "type": "paragraph", "content": "Para trabajar con informacion o valores se disponen dos formas de representacion" },
-            { "type": "code", "content": "console.log('Hello, Main Title!');" },
-            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
+            { "type": "paragraph", "content": "Para trabajar con informacion o valores se disponen dos formas de representacion" }
             ],
             "subtitles": [
                 {
@@ -60,9 +38,7 @@
         "type": "title",
         "content": "Operadores",
         "elements": [
-            { "type": "paragraph", "content": "Dentro de la sintaxis del lenguaje se encuentran los operadores que son un conjunto de caracteres que permiten la manipulacion y/o comparacion de valores explicitos o en variables" },
-            { "type": "code", "content": "console.log('Hello, Main Title!');" },
-            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
+            { "type": "paragraph", "content": "Dentro de la sintaxis del lenguaje se encuentran los operadores que son un conjunto de caracteres que permiten la manipulacion y/o comparacion de valores explicitos o en variables" }
             ],
             "subtitles": [
                 {
@@ -160,135 +136,54 @@
             ]
     },
     {
-        "type": "subtitle",
-        "content": "Subtitle 2",
+        "type": "title",
+        "content": "Variables",
         "elements": [
-            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
+            { "type": "paragraph", "content": "Una variable es un espacio de memoria donde se guarda algun valor que representa cierto dato, este espacio se representa para el programador con el nombre que se le da a la variable y a travez de la utilizacion del nombre se puede acceder al valor para leerlo o cambiarlo" }
+        ], "subtitles":[
+            {"type":"subtitle","content":"Declaracion", "elements":[
+                {"type":"paragraph", "content":"Para declarar variables se necesita crear el segmento de varibales escribiendo la palabra clave variables, este segmento no puede ser creado en cualquier lugar, revisar el apartado de secciones, ahi se detalla si en una seccion pueden existir variables dato\nLos tipos posible de variables son:"},
+                {"type":"list", "content":["numero: para representar numeros enteros", "boolean: para representar valores logicos (V o F)"]},
+                {"type":"paragraph","content":"La creacion de la variable sigue la siguiente estructura"},
+                {"type":"code","content":"variables\n   nombreDeLaVariable : tipoDeVariable"},
+                {"type":"paragraph","content":"Se pueden crear la cantidad que se necesiten"},
+                {"type":"code","content":"variables\n   nombre1 : tipo1\nnombre2 : tipo2\nnombre3 : tipo3\nnombre4 : tipo4\n"},
+                {"type":"paragraph","content":"Si son del mismo tipo pueden declararse juntas separadas por una ','"},
+                {"type":"code","content":"variables\n   nombre1, nombre4 : tipo1\nnombre2, nombre3 : tipo2"}
+            ]
+            },
+            {"type":"subtitle","content":"Operaciones", "elements":[
+                {"type":"paragraph", "content":"Como se definio previamente las variables representan valores por lo tanto existen las operaciones que definimos tambien previamente\nBasicamente las operaciones con variables se dividne en dos grandes grupos, las que involucran lectura de una variable o por el otro las que involucran escritura a una variable"},
+                {"type":"list", "content":["numero: para representar numeros enteros", "boolean: para representar valores logicos (V o F)"]},
+                {"type":"paragraph","content":"La creacion de la variable sigue la siguiente estructura"},
+                {"type":"code","content":"variables\n   nombreDeLaVariable : tipoDeVariable"},
+                {"type":"paragraph","content":"Se pueden crear la cantidad que se necesiten"},
+                {"type":"code","content":"variables\n   nombre1 : tipo1\nnombre2 : tipo2\nnombre3 : tipo3\nnombre4 : tipo4\n"},
+                {"type":"paragraph","content":"Si son del mismo tipo pueden declararse juntas separadas por una ','"},
+                {"type":"code","content":"variables\n   nombre1, nombre4 : tipo1\nnombre2, nombre3 : tipo2"},
+                {"type":"secondarySubtitle", "content":"Escritura"},
+                {"type":"paragraph","content":"Para la escritura de un valor en una variable se debe poner la variable a escribir o reescribir su valor luego la sintaxis de asignacion ( := ) y a continuacion el valor explicito o las operaciones que den como resultado un valor, siempre respetando los tipos de dato"},
+                {"type":"code","content":"Por ejemplo: \n\nSi se quiere guardar en la variable resultado el doble de una variable, lo que se debe hacer es\n\n    resultado := 2 * ( nombreDeLaVariable )\n\no bien como la multiplicacion es distributiva\n\n    resultado := ( nombreDeLaVariable ) * 2\n\nSi se quiere guardar el valor opuesto a la verificacion de si una variable numerica es mayor o igual a otra, lo que se debe hacer es\n\n validacionOpuesta := ~ ( n1 >= n2 )\n\no bien como la multiplicacion es distributiva\n\n    resultado := ( nombreDeLaVariable ) * 2"},
+                {"type":"secondarySubtitle", "content":"Lectura"},
+                {"type":"paragraph","content":"Para la utilizacion de el valor que representa una variable es tan sencillo como poner el nombre de variable en el lugar donde corresponderia que este el valor que esta representa"},
+                {"type":"code","content":"Por ejemplo: \n\n   Si se quiere sumar dos numeros, siendo uno la variable num1 y otro la variable num 2 lo que se debe hacer es\n\n  num1 + num2\n\nOtro ejemplo:\n\nSi se quiere asegurar que dos variables booleanas, siendo una estado1 y otra estado2, sean verdaderas lo que se debe hacer es\n\nestado1 & estado2"}
+            ]
+            }
         ]
     },
     {
         "type": "title",
-        "content": "Main Title",
+        "content": "Instrucciones",
         "elements": [
-            { "type": "paragraph", "content": "This is a paragraph under the Main Title." },
-            { "type": "code", "content": "console.log('Hello, Main Title!');" },
-            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
-        ]
-    },
-    {
-        "type": "subtitle",
-        "content": "Subtitle 1",
-        "elements": [
-            { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
-            { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
-            { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
-        ]
-    },
-    {
-        "type": "subtitle",
-        "content": "Subtitle 2",
-        "elements": [
-            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
-        ]
-    },
-    {
-        "type": "title",
-        "content": "Main Title",
-        "elements": [
-            { "type": "paragraph", "content": "This is a paragraph under the Main Title." },
-            { "type": "code", "content": "console.log('Hello, Main Title!');" },
-            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
-        ]
-    },
-    {
-        "type": "subtitle",
-        "content": "Subtitle 1",
-        "elements": [
-            { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
-            { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
-            { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
-        ]
-    },
-    {
-        "type": "subtitle",
-        "content": "Subtitle 2",
-        "elements": [
-            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
-        ]
-    },
-    {
-        "type": "title",
-        "content": "Main Title",
-        "elements": [
-            { "type": "paragraph", "content": "This is a paragraph under the Main Title." },
-            { "type": "code", "content": "console.log('Hello, Main Title!');" },
-            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
-        ]
-    },
-    {
-        "type": "subtitle",
-        "content": "Subtitle 1",
-        "elements": [
-            { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
-            { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
-            { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
-        ]
-    },
-    {
-        "type": "subtitle",
-        "content": "Subtitle 2",
-        "elements": [
-            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
-        ]
-    },
-    {
-        "type": "title",
-        "content": "Main Title",
-        "elements": [
-            { "type": "paragraph", "content": "This is a paragraph under the Main Title." },
-            { "type": "code", "content": "console.log('Hello, Main Title!');" },
-            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
-        ]
-    },
-    {
-        "type": "subtitle",
-        "content": "Subtitle 1",
-        "elements": [
-            { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
-            { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
-            { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
-        ]
-    },
-    {
-        "type": "subtitle",
-        "content": "Subtitle 2",
-        "elements": [
-            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
-        ]
-    },
-    {
-        "type": "title",
-        "content": "Main Title",
-        "elements": [
-            { "type": "paragraph", "content": "This is a paragraph under the Main Title." },
-            { "type": "code", "content": "console.log('Hello, Main Title!');" },
-            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
-        ]
-    },
-    {
-        "type": "subtitle",
-        "content": "Subtitle 1",
-        "elements": [
-            { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
-            { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
-            { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
-        ]
-    },
-    {
-        "type": "subtitle",
-        "content": "Subtitle 2",
-        "elements": [
-            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
+            { "type": "paragraph", "content": "Dentro de la sintaxis del lenguaje se encuentran las instrucciones que permiten realizar determinadas tareas/acciones\nEstas se dividen en"}
+        ], "subtitles":[
+            {"type":"subtitle",
+                "content":"Control",
+                "elements":[
+                    {"type":"paragraph", "content":"Las intrucciones de control son las que permiten que se ejecute cierta codigo o no, con esto se consigue que un programa reaccione dependiendo de ciertos valores o circunstancias\nLas instrucciones se dividen en dos grupo iterativas o no interativas\nNo iterativas: solo ejecutan el codigo que les presigue una unica vez\nIterativas: pueden ejecutar el codigo que les presigue 1 o mas veces\nInstrucciones:"},
+                    {"type":"table", "content":[["sintaxis", "Iterativa"], ["si(condicional/es)","no"],["sino", "no"],["mientras(condicional/es)", "si"],["repetir(numero)", "si"]]}
+                ]
+            }
         ]
     }
 ]
