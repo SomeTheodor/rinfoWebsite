@@ -20,97 +20,185 @@ window.addEventListener('scroll', adjustScrollspyBehavior);
 window.addEventListener('resize', adjustScrollspyBehavior);
 document.addEventListener('DOMContentLoaded', adjustScrollspyBehavior);
 
-        async function loadDynamicContent() {
-            try {
-                const response = await fetch('/assets/data.json');
-                if (!response.ok) throw new Error(`Error al cargar JSON: ${response.status} ${response.statusText}`);
+function createElementByType(subItem) {
+    let element;
 
-                const jsonData = await response.json();
+    switch (subItem.type) {
+        case 'paragraph':
+            element = document.createElement('p');
+            element.className = 'mb-3';
+            element.innerHTML = subItem.content.replace(/\n/g, '<br><br>');
+            break;
 
-                // Referencias a los contenedores
-                const navbar = document.querySelector('#navbar-example3 .nav');
-                const offcanvasNav = document.querySelector("#scrollspyMenu .offcanvas-body .nav");
-                const content = document.querySelector('.scrollspy-example-2');
+        case 'code':
+            element = document.createElement('pre');
+            element.className = 'code-block p-3';
+            const code = document.createElement('code');
+            code.textContent = subItem.content;
+            element.appendChild(code);
+            break;
 
-                // Limpiar contenido previo
-                [navbar, offcanvasNav, content].forEach(el => el.innerHTML = "");
+        case 'list':
+            element = document.createElement('ul');
+            subItem.content.forEach(listItem => {
+                const li = document.createElement('li');
+                li.innerHTML = listItem.replace(/\n/g, '<br>');
+                element.appendChild(li);
+            });
+            break;
 
-                const fragment = document.createDocumentFragment();
+        case 'table':
+            element = document.createElement('table');
+            element.className = 'table table-striped mb-4';
+            const tableBody = document.createElement('tbody');
 
-                jsonData.forEach(item => {
-                    let element;
+            subItem.content.forEach(row => {
+                const tr = document.createElement('tr');
+                row.forEach(cell => {
+                    const td = document.createElement('td');
+                    td.innerHTML = cell;
+                    tr.appendChild(td);
+                });
+                tableBody.appendChild(tr);
+            });
 
-                    switch (item.type) {
-                        case 'title':
-                        case 'subtitle': {
-                            const titleId = item.content.replace(/\s+/g, '-').toLowerCase();
+            element.appendChild(tableBody);
+            break;
 
-                            // Crear título o subtítulo en contenido
-                            element = document.createElement(item.type === 'title' ? 'h1' : 'h2');
-                            element.className = item.type === 'title' ? 'mb-4 text-primary' : 'mb-3 text-secondary';
-                            element.id = titleId;
-                            element.textContent = item.content;
-                            fragment.appendChild(element);
+        case 'secondarySubtitle':
+            const secondarySubtitleId = subItem.content.replace(/\s+/g, '-').toLowerCase();
+            element = document.createElement('h3');
+            element.className = 'mb-3 text-secondary';
+            element.id = secondarySubtitleId;
+            element.textContent = subItem.content;
+            break;
 
-                            // Crear enlaces para scrollspy y offcanvas
-                            const navLink = document.createElement('a');
-                            navLink.className = 'nav-link';
-                            navLink.href = `#${titleId}`;
-                            navLink.textContent = item.content;
+        default:
+            console.warn(`Tipo desconocido: ${subItem.type}`);
+            return null;
+    }
 
-                            [navbar, offcanvasNav].forEach(nav => nav.appendChild(navLink.cloneNode(true)));
-                            break;
-                        }
-                        case 'paragraph':
-                            element = document.createElement('p');
-                            element.className = 'mb-3';
-                            element.innerHTML = item.content.replace(/\n/g, '<br><br>');
-                            fragment.appendChild(element);
-                            break;
+    return element;
+}
 
-                        case 'code':
-                            element = document.createElement('pre');
-                            element.className = 'code-block p-3';
-                            const code = document.createElement('code');
-                            code.textContent = item.content;
-                            element.appendChild(code);
-                            fragment.appendChild(element);
-                            break;
+async function loadDynamicContent() {
+    try {
+        const response = await fetch('/assets/data.json');
+        if (!response.ok) throw new Error(`Error al cargar JSON: ${response.status} ${response.statusText}`);
 
-                        case 'list':
-                            element = document.createElement('ul');
-                            item.content.forEach(listItem => {
-                                const li = document.createElement('li');
-                                li.innerHTML = listItem.replace(/\n/g, '<br>');
-                                element.appendChild(li);
+        const jsonData = await response.json();
+
+        // Referencias a los contenedores
+        const navbar = document.querySelector('#navbar-example3 .nav');
+        const offcanvasNav = document.querySelector("#scrollspyMenu .offcanvas-body .nav");
+        const content = document.querySelector('.scrollspy-example-2');
+
+        // Limpiar contenido previo
+        [navbar, offcanvasNav, content].forEach(el => el.innerHTML = "");
+
+        const fragment = document.createDocumentFragment();
+
+        jsonData.forEach(item => {
+            if (item.type === 'title') {
+                const titleId = item.content.replace(/\s+/g, '-').toLowerCase();
+
+                // Crear título en el contenido
+                const titleElement = document.createElement('h1');
+                titleElement.className = 'mb-4 text-primary';
+                titleElement.id = titleId;
+                titleElement.textContent = item.content;
+                fragment.appendChild(titleElement);
+
+                // Procesar elementos del título
+                if (item.elements) {
+                    item.elements.forEach(subItem => {
+                        const element = createElementByType(subItem);
+                        if (element) fragment.appendChild(element);
+                    });
+                }
+
+                // Crear enlace del título en el scrollspy
+                const navItem = document.createElement('li');
+                navItem.className = 'nav-item';
+
+                const navLink = document.createElement('a');
+                navLink.className = 'nav-link';
+                navLink.href = `#${titleId}`;
+                navLink.textContent = item.content;
+                navItem.appendChild(navLink);
+
+                // Crear lista de subtítulos (si existen)
+                if (item.subtitles && item.subtitles.length > 0) {
+                    const subtitleList = document.createElement('ul');
+                    subtitleList.className = 'nav flex-column ms-3';
+
+                    item.subtitles.forEach(subtitle => {
+                        const subtitleId = subtitle.content.replace(/\s+/g, '-').toLowerCase();
+
+                        // Crear subtítulo en el contenido
+                        const subtitleElement = document.createElement('h2');
+                        subtitleElement.className = 'mb-3 text-secondary';
+                        subtitleElement.id = subtitleId;
+                        subtitleElement.textContent = subtitle.content;
+                        fragment.appendChild(subtitleElement);
+
+                        // Procesar elementos del subtítulo
+                        if (subtitle.elements) {
+                            subtitle.elements.forEach(subItem => {
+                                const element = createElementByType(subItem);
+                                if (element) {
+                                    // Renderizar el contenido normalmente
+                                    fragment.appendChild(element);
+
+                                    // Si el elemento es un secondarySubtitle, no lo agregamos al scrollspy
+                                    if (subItem.type === 'secondarySubtitle') {
+                                        return;
+                                    }
+                                }
                             });
-                            fragment.appendChild(element);
-                            break;
+                        }
 
-                        default:
-                            console.warn(`Tipo desconocido: ${item.type}`);
-                            return;
-                    }
-                });
+                        // Crear enlace del subtítulo en el scrollspy
+                        const subtitleNavItem = document.createElement('li');
+                        subtitleNavItem.className = 'nav-item';
 
-                content.appendChild(fragment);
+                        const subtitleNavLink = document.createElement('a');
+                        subtitleNavLink.className = 'nav-link';
+                        subtitleNavLink.href = `#${subtitleId}`;
+                        subtitleNavLink.textContent = subtitle.content;
+                        subtitleNavItem.appendChild(subtitleNavLink);
 
-                // Reactivar el scrollspy después de cargar contenido dinámico
-                bootstrap.ScrollSpy.getInstance(document.body)?.dispose();
-                new bootstrap.ScrollSpy(document.body, { target: '#navbar-example3', offset: 100 });
+                        subtitleList.appendChild(subtitleNavItem);
+                    });
 
-                // Cerrar offcanvas al hacer clic en un enlace
-                const offcanvasElement = document.getElementById('scrollspyMenu');
-                const offcanvasInstance = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
+                    // Anidar la lista de subtítulos al elemento del título en el scrollspy
+                    navItem.appendChild(subtitleList);
+                }
 
-                offcanvasNav.querySelectorAll('.nav-link').forEach(link => {
-                    link.addEventListener('click', () => offcanvasInstance.hide());
-                });
-
-            } catch (error) {
-                console.error('Error al cargar contenido dinámico:', error);
+                // Agregar el elemento del título al scrollspy
+                navbar.appendChild(navItem);
+                offcanvasNav.appendChild(navItem.cloneNode(true));
             }
-        }
+        });
 
-        // Cargar contenido al iniciar
-        loadDynamicContent();
+        content.appendChild(fragment);
+
+        // Reactivar el scrollspy después de cargar contenido dinámico
+        bootstrap.ScrollSpy.getInstance(document.body)?.dispose();
+        new bootstrap.ScrollSpy(document.body, { target: '#navbar-example3', offset: 100 });
+
+        // Cerrar offcanvas al hacer clic en un enlace
+        const offcanvasElement = document.getElementById('scrollspyMenu');
+        const offcanvasInstance = bootstrap.Offcanvas.getOrCreateInstance(offcanvasElement);
+
+        offcanvasNav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => offcanvasInstance.hide());
+        });
+
+    } catch (error) {
+        console.error('Error al cargar contenido dinámico:', error);
+    }
+}
+
+// Cargar contenido al iniciar
+loadDynamicContent();
