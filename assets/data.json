@@ -1,111 +1,295 @@
 [
     {
         "type": "title",
-        "content": "Introduccion"
-    },
-    {
-        "type": "paragraph",
-        "content": "Esta pagina fue diseñada para ayudar en el desarrollo de los futuros ingresantes y personas que esten interesadas en la codificacion y en el cual poder aprender sobre la programacion concurrente. "
-    },
-    {
-        "type": "title",
-        "content": "Que es R-Info"
-    },
-    {
-        "type": "paragraph",
-        "content": "R-Info es un entorno de programacion donde se aprende conceptos basicos sobre como se constituye un programa y como se escribe uno, esto lo hace de manera sencilla ( con instrucciones y datos elementales o basicos en idioma español ) y didacticamente al ser un robot o varios, ubicado dentro de un mapa, el que realiza el algoritmo creado por programador. \n Este entorno ofrece la posibilidad de ademas de aprender lo ya mencionado tambien tiene la capacidad de trabajar con el paradigma de programacion concurrente ya que puede coexistir mas de un robot en el mismo mapa de manera que el programa tendra que estar preparado para esto si se usa mas de un robot. \n Sobre el mapa donde interactuan los robots este es una matriz de 100 filas y 100 columnas que simula una ciudad, llamandoce calles a las filas y avenidas a las columnas. El extremo inferior izquierdo es la avenida 1, calle 1 y el extremo superior derecho es la avenida 100, calle 100"
-    },
-    {
-        "type": "title",
-        "content": "Estructura del programa"
-    },
-    {
-        "type": "paragraph",
-        "content": "La estructuda del programa consiste en:"
-    },
-    {
-        "type": "code",
-        "content": "programa\n\nprocesos(opcional)\n\nareas\n\nrobots\n\nvariables\n\ncomenzar\n\nfin"
-    },
-    {
-        "type": "list",
-        "content": ["Programa\n\n Es donde se le da el nombre al", "JSON makes it dynamic", "JavaScript ties it all together"]
-    },
-    {
-        "type": "paragraph",
-        "content": "Add more items to the JSON file to see them rendered here."
+        "content": "Que es R-Info?",
+        "elements": [
+            { "type": "paragraph", "content": "R-Info es un entorno de programacion donde se aprende conceptos basicos sobre como se constituye un programa y como se escribe uno, esto lo hace de manera sencilla ( con instrucciones y datos elementales o basicos en idioma español ) y didacticamente al ser un robot o varios, ubicado dentro de un mapa, el que realiza el algoritmo creado por programador" },
+            { "type": "code", "content": "console.log('Hello, Main Title!');" },
+            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
+            ],
+            "subtitles": [
+            {
+                "type": "subtitle",
+                "content": "Subtitle 1",
+                "elements": [
+                    { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
+                    { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
+                    { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
+                ]
+            },
+            {
+                "type": "subtitle",
+                "content": "Subtitle 2",
+                "elements": [
+                    { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
+                ]
+            }
+        ]
     },
     {
         "type": "title",
-        "content": "Welcome to the Dynamic Page"
-    },
-    {
-        "type": "paragraph",
-        "content": "This paragraph demonstrates how JSON content can be styled using Bootstrap."
-    },
-    {
-        "type": "code",
-        "content": "const example = 'This is a Bootstrap styled code block';\nconsole.log(example);"
-    },
-    {
-        "type": "list",
-        "content": ["Bootstrap makes styling easy", "JSON makes it dynamic", "JavaScript ties it all together"]
-    },
-    {
-        "type": "paragraph",
-        "content": "Add more items to the JSON file to see them rendered here."
+        "content": "Tipos de datos",
+        "elements": [
+            { "type": "paragraph", "content": "Para trabajar con informacion o valores se disponen dos formas de representacion" },
+            { "type": "code", "content": "console.log('Hello, Main Title!');" },
+            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
+            ],
+            "subtitles": [
+                {
+                    "type": "subtitle",
+                    "content": "Numeros",
+                    "elements": [
+                        { "type": "paragraph", "content": "El tipo de dato numero se utiliza para representar cantidades, es decir, como los el conjunto de los numeros enteros en matematica." },
+                        { "type": "paragraph", "content": "Estos van desde el -2^31 ( -2.147.483.648 ) hasta el 2^31 ( 2.147.483.648 )." }
+                    ]
+                },
+                {
+                    "type": "subtitle",
+                    "content": "Booleanos",
+                    "elements": [
+                        { "type": "paragraph", "content": "El tipo de dato booleano se utiliza para representar si algo es verdad o si algo es falso, es decir, la veracidad de una afirmacion o sentencia" },
+                        { "type": "paragraph", "content": "Sus dos unicos posible valores son" },
+                        { "type": "list", "content": ["'V' para la Verdad", "'F' para la Falsedad"] },
+                        { "type": "paragraph", "content": "Tambien se usan para representar: " },
+                        { "type": "list", "content": ["Existencia o inexistencia", "Permitido/habilitado o no permitido/no habilitado"] }
+                    ]
+                }
+            ]
     },
     {
         "type": "title",
-        "content": "mirenme"
+        "content": "Operadores",
+        "elements": [
+            { "type": "paragraph", "content": "Dentro de la sintaxis del lenguaje se encuentran los operadores que son un conjunto de caracteres que permiten la manipulacion y/o comparacion de valores explicitos o en variables" },
+            { "type": "code", "content": "console.log('Hello, Main Title!');" },
+            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
+            ],
+            "subtitles": [
+                {
+                    "type": "subtitle",
+                    "content": "Logicos",
+                    "elements": [
+                        { "type": "paragraph", "content": "Los operadores logicos dan como resultado valores booleanos, es decir, verdad o falsedad dependiendo de las entradas" },
+                        { "type": "paragraph", "content": "Operadores para datos booleanos:" },
+                        {"type":"table", "content":[["sintaxis","nombre/s"],["~","negacion , no"],["|","disyuncion, ó"],["&","conjuncion, y"],["=", "igualdad, igual"],["<>","diferente, distinto"]]},
+                        { "type": "paragraph", "content": "Operadores para datos numericos:" },
+                        {"type":"table", "content":[["sintaxis","nombre/s"],["=","igualacion, igual"],["<","menor"],[">","mayor"],["<=", "menor ó igual"],[">=", "mayor ó igual"],["<>","diferente, distinto"]]},
+                        {"type":"secondarySubtitle", "content":"Operador ~"},
+                        { "type": "paragraph", "content": "El no es un operador unario (se aplica en solo un valor), este cambia el valor logico al opuesto" },
+                        { "type": "paragraph", "content": "Su tabla de verdad es:" },
+                        {"type":"table", "content":[["Entrada","Resultado"],["~F","v"],["~V","F"]]},
+                        {"type":"secondarySubtitle", "content":"Operador |"},
+                        {"type":"paragraph", "content":"El o es un operador binario (se aplica entre dos valores), este da como resultado verdad si almenos uno de los valores es verdad"},
+                        { "type": "paragraph", "content": "Su tabla de verdad es:" },
+                        {"type":"table", "content":[["Entrada","Resultado"],["F|F","F"],["V|F","V"],["F|V","V"],["V|V","V"]]},
+                        {"type":"secondarySubtitle", "content":"Operador &"},
+                        {"type":"paragraph", "content":"El y es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si ambos valores son verdad"},
+                        { "type": "paragraph", "content": "Su tabla de verdad es:" },
+                        {"type":"table", "content":[["Entrada","Resultado"],["F&F","F"],["V&F","F"],["F&V","F"],["V&V","V"]]},
+                        {"type":"secondarySubtitle", "content":"Operador ="},
+                        {"type":"paragraph", "content":"El igual es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si ambos valores son iguales respetando que sean el mismo tipo de dato"},
+                        { "type": "paragraph", "content": "Su tabla de verdad con valores booleanos es:" },
+                        {"type":"table", "content":[["Entrada","Resultado"],["F=F","F"],["V=F","F"],["F=V","F"],["V=V","V"]]},
+                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                        {"type":"table", "content":[["Entrada","Resultado"],["2=2","V"],["5=18","F"],["-95=4","F"],["-1=-1","V"]]},
+                        {"type":"secondarySubtitle", "content":"Operador <>"},
+                        {"type":"paragraph", "content":"El diferente es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si ambos valores son distintos respetando que sean el mismo tipo de dato"},
+                        { "type": "paragraph", "content": "Su tabla de verdad con valores booleanos es:" },
+                        {"type":"table", "content":[["Entrada","Resultado"],["F<>F","F"],["V<>F","V"],["F<>V","V"],["V<>V","F"]]},
+                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                        {"type":"table", "content":[["Entrada","Resultado"],["2=2","F"],["5<>18","V"],["-95<>4","V"],["-1<>-1","F"]]},
+                        {"type":"secondarySubtitle", "content":"Operador <"},
+                        {"type":"paragraph", "content":"El menor es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si el primer valor es mas pequeño que el segundo"},
+                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                        {"type":"table", "content":[["Entrada","Resultado"],["2<2","F"],["4<23","V"],["65<-1","F"],["-5<-1","V"]]},
+                        {"type":"secondarySubtitle", "content":"Operador >"},
+                        {"type":"paragraph", "content":"El mayor es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si el primer valor es mas grande que el segundo"},
+                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                        {"type":"table", "content":[["Entrada","Resultado"],["2>2","F"],["4>23","F"],["65>-1","V"],["-1>-5","V"]]},
+                        {"type":"secondarySubtitle", "content":"Operador <="},
+                        {"type":"paragraph", "content":"El menor o igual es un operador binario (se aplica entre dos valores), este da como resultado verdad si primer valor es mas pequeño que el segundo o si los dos valores son iguales"},
+                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                        {"type":"table", "content":[["Entrada","Resultado"],["2<=2","V"],["4<=23","V"],["65<=-1","F"],["-1<=-1","V"]]},
+                        {"type":"secondarySubtitle", "content":"Operador >="},
+                        {"type":"paragraph", "content":"El mayor o igual es un operador binario (se aplica entre dos valores), este da como resultado verdad si primer valor es mas grande que el segundo o si los dos valores son iguales"},
+                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                        {"type":"table", "content":[["Entrada","Resultado"],["2>=2","V"],["4>=23","F"],["65>=-1","V"],["-1>=-1","V"]]}
+                    ]
+                },
+                {
+                    "type": "subtitle",
+                    "content": "Aritmeticos",
+                    "elements": [
+                        { "type": "paragraph", "content": "Los operadores aritmeticos dan como resultado valores numericos enteros dependiendo de las entradas" },
+                        { "type": "paragraph", "content": "Operadores:" },
+                        {"type":"table", "content":[["sintaxis","Funcion"],["+","adicion , suma"],["-","sustraccion , resta"],["*","producto , multiplicacion"],["/", "division"]]},
+                        {"type":"secondarySubtitle", "content":"Asignacion"},
+                        { "type": "paragraph", "content": "Los operadores de asignacion se utilizan para decir el tipo de dato de una variable o para darle el valor a una variable" },
+                        { "type": "paragraph", "content": "Operadores:" },
+                        {"type":"table", "content":[["Sintaxis","Funcion"],[":","Asignacion"],[":=","Asignacion"]]},
+                        {"type":"secondarySubtitle", "content":"Operador :"},
+                        { "type": "paragraph", "content": "El : se utiliza para decir que x variable sera de cierto tipo" },
+                        {"type":"table", "content":[["Utilizacion"],["(nombre variable) : (tipo de dato)"]]},
+                        {"type":"code", "content":"num: numero; cond: boolean;"}
+                    ]
+                },
+                {
+                    "type": "subtitle",
+                    "content": "Encadenamiento",
+                    "elements": [
+                        { "type": "paragraph", "content": "Como en las matematicas se pueden armar ecuaciones con valores y operaciones, esto no es la exepcion, por ende para encadenar operaciones solo se necesitan los valores/variables y operaciones que operen con estos" },
+                        { "type": "paragraph", "content": "Ejemplo con numeros" },
+                        {"type":"code", "content":"Si se quiere sumar el doble de 9 con la mitad de 16, se debe hacer\n2*9 + 16 / 2, esto da como resultado 26"},
+                        { "type": "paragraph", "content": "Ejemplo con booleanos" },
+                        {"type":"code", "content":"Si se quiere saber si dos valores son verdaderos o un tercero negado es verdadero se deb hacer\nV & F | ~ F , esto da como resultado V"},
+                        { "type": "paragraph", "content": "Ejemplo con numeros y booleanos" },
+                        {"type":"paragraph","content":"Normalmente se realizan operaciones aritmeticas y a esos resultados se aplican operadores logicos correspondientes de manera que el resultado final sean valores booleanos que reflejen un estado"},
+                        {"type":"code", "content":"Se quiere saber si el doble de 10 es menor a la mitad de 34\n2 * 10 < 34 / 2 = V, esto da como resultado Verdadero"},
+                        {"type":"paragraph","content":"El resultado de lo anterior deberia ser falso si no fuera por el echo de que no queda claro el orden de las operaciones, para eso se utilizan los ( )"},
+                        {"type":"secondarySubtitle", "content":"Parentesis"},
+                        { "type": "paragraph", "content": "Los parentesis son de gran importancia ya que permiten denotar prioridad a la hora de la resolucion de un encadenamiento de operaciones, como se bio anteriormente en determinadas circunstancias es necesario indicar la prioridad para una correcta operacion y tambien para evitar confusiones\nReestructuracion de ejemplo previo" },
+                        {"type":"code","content":"Se quiere saber si el doble de 10 es menor a la mitad de 34\n( 2 * 10 ) < ( 34 / 2 ) = V , el resultado es F"},
+                        { "type": "paragraph", "content": "Ahora queda claro que primero deben resolverse las operaicones aritmeticas y luego las logicas\nLa utilizacion de parentesis permite realizar encadenamiento de operaciones mas complejas\nPor ejemplo"},
+                        {"type":"code", "content":"Se quiere saber si dos valores son V o si es V la negacion de un tercero o el valor de un cuarto\n( F & V ) | ( ( ~ V ) | V ), el resultado es V"},
+                        {"type":"secondarySubtitle", "content":"Operador :"},
+                        { "type": "paragraph", "content": "El : se utiliza para decir que x variable sera de cierto tipo" },
+                        {"type":"table", "content":[["Utilizacion"],["(nombre variable) : (tipo de dato)"]]},
+                        {"type":"code", "content":"num: numero; cond: boolean;"}
+                    ]
+                }
+            ]
     },
     {
-        "type": "paragraph",
-        "content": "This paragraph demonstrates how JSON content can be styled using Bootstrap."
-    },
-    {
-        "type": "code",
-        "content": "const example = 'This is a Bootstrap styled code block';\nconsole.log(example);"
-    },
-    {
-        "type": "list",
-        "content": ["Bootstrap makes styling easy", "JSON makes it dynamic", "JavaScript ties it all together"]
-    },
-    {
-        "type": "paragraph",
-        "content": "Add more items to the JSON file to see them rendered here."
-    },
-    {
         "type": "subtitle",
-        "content": "Add more items to the JSON file to see them rendered here."   
+        "content": "Subtitle 2",
+        "elements": [
+            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
+        ]
+    },
+    {
+        "type": "title",
+        "content": "Main Title",
+        "elements": [
+            { "type": "paragraph", "content": "This is a paragraph under the Main Title." },
+            { "type": "code", "content": "console.log('Hello, Main Title!');" },
+            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
+        ]
     },
     {
         "type": "subtitle",
-        "content": "Add more items to the JSON file to see them rendered here."   
+        "content": "Subtitle 1",
+        "elements": [
+            { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
+            { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
+            { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
+        ]
     },
     {
         "type": "subtitle",
-        "content": "Add more items to the JSON file to see them rendered here."   
-    },{
+        "content": "Subtitle 2",
+        "elements": [
+            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
+        ]
+    },
+    {
+        "type": "title",
+        "content": "Main Title",
+        "elements": [
+            { "type": "paragraph", "content": "This is a paragraph under the Main Title." },
+            { "type": "code", "content": "console.log('Hello, Main Title!');" },
+            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
+        ]
+    },
+    {
         "type": "subtitle",
-        "content": "Add more items to the JSON file to see them rendered here."   
-    },{
+        "content": "Subtitle 1",
+        "elements": [
+            { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
+            { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
+            { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
+        ]
+    },
+    {
         "type": "subtitle",
-        "content": "Add more items to the JSON file to see them rendered here."   
-    },{
+        "content": "Subtitle 2",
+        "elements": [
+            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
+        ]
+    },
+    {
+        "type": "title",
+        "content": "Main Title",
+        "elements": [
+            { "type": "paragraph", "content": "This is a paragraph under the Main Title." },
+            { "type": "code", "content": "console.log('Hello, Main Title!');" },
+            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
+        ]
+    },
+    {
         "type": "subtitle",
-        "content": "Add more items to the JSON file to see them rendered here."   
-    },{
+        "content": "Subtitle 1",
+        "elements": [
+            { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
+            { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
+            { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
+        ]
+    },
+    {
         "type": "subtitle",
-        "content": "Add more items to the JSON file to see them rendered here."   
-    },{
+        "content": "Subtitle 2",
+        "elements": [
+            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
+        ]
+    },
+    {
+        "type": "title",
+        "content": "Main Title",
+        "elements": [
+            { "type": "paragraph", "content": "This is a paragraph under the Main Title." },
+            { "type": "code", "content": "console.log('Hello, Main Title!');" },
+            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
+        ]
+    },
+    {
         "type": "subtitle",
-        "content": "Add more items to the JSON file to see them rendered here."   
-    },{
+        "content": "Subtitle 1",
+        "elements": [
+            { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
+            { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
+            { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
+        ]
+    },
+    {
         "type": "subtitle",
-        "content": "Add more items to the JSON file to see them rendered here."   
-    },{
+        "content": "Subtitle 2",
+        "elements": [
+            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
+        ]
+    },
+    {
+        "type": "title",
+        "content": "Main Title",
+        "elements": [
+            { "type": "paragraph", "content": "This is a paragraph under the Main Title." },
+            { "type": "code", "content": "console.log('Hello, Main Title!');" },
+            { "type": "list", "content": ["Item A", "Item B", "Item C"] }
+        ]
+    },
+    {
         "type": "subtitle",
-        "content": "Add more items to the JSON file to see them rendered here."   
+        "content": "Subtitle 1",
+        "elements": [
+            { "type": "paragraph", "content": "This is a paragraph under Subtitle 1." },
+            { "type": "code", "content": "console.log('Hello, Subtitle 1!');" },
+            { "type": "list", "content": ["Item 1", "Item 2", "Item 3"] }
+        ]
+    },
+    {
+        "type": "subtitle",
+        "content": "Subtitle 2",
+        "elements": [
+            { "type": "paragraph", "content": "Another paragraph under Subtitle 2." }
+        ]
     }
 ]
+
