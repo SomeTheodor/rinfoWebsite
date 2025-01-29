@@ -181,7 +181,105 @@
                 "content":"Control",
                 "elements":[
                     {"type":"paragraph", "content":"Las intrucciones de control son las que permiten que se ejecute cierta codigo o no, con esto se consigue que un programa reaccione dependiendo de ciertos valores o circunstancias\nLas instrucciones se dividen en dos grupo iterativas o no interativas\nNo iterativas: solo ejecutan el codigo que les presigue una unica vez\nIterativas: pueden ejecutar el codigo que les presigue 1 o mas veces\nInstrucciones:"},
-                    {"type":"table", "content":[["sintaxis", "Iterativa"], ["si(condicional/es)","no"],["sino", "no"],["mientras(condicional/es)", "si"],["repetir(numero)", "si"]]}
+                    {"type":"table", "content":[["sintaxis", "Iterativa"], ["si(condicional/es)","no"],["sino", "no"],["mientras(condicional/es)", "si"],["repetir(numero)", "si"]]},
+                    {"type":"secondarySubtitle", "content":"Instruccion si"},
+                    {"type":"paragraph", "content":"La instruccion si se utiliza para habilitar o no la ejecucion del bloque de codigo que este identado debajo de esta, este solo se ejecutara si solo si el resultado de la condicion que acompaña al si sea verdadera\nEstructura del si"},
+                    {"type":"code", "content":"si ( condicion )\n   bloque de codigo\n  a ejecutar"},
+                    {"type":"paragraph", "content":"Ejemplo de uso del si es guardar el maximo entre dos numeros"},
+                    {"type":"code", "content":"si (n1>n2)\n max:= n1\nsi (n1<n2)\n max:= n2\n"},
+                    {"type":"secondarySubtitle", "content":"Instruccion sino"},
+                    {"type":"paragraph", "content":"La instruccion sino solo se puede utilizar si previamente existe una instruccion si, ya que esta actua en consecuencia del si. El sino se utiliza para habilitar la ejecucion del bloque de codigo que este identado debajo de este si solo si la condicion que evalua el si dio falsa\nEstructura del sino"},
+                    {"type":"code", "content":"si ( condicion )\n   bloque de codigo\n  a ejecutar\nsino ( condicion )\n   bloque de codigo\n  a ejecutar"},
+                    {"type":"paragraph", "content":"Optimizando el maximo entre dos numeros"},
+                    {"type":"code", "content":"si (n1>n2)\n max:= n1\nsino\n max:= n2\n"},
+                    {"type":"paragraph", "content":"No hace falta verificar si n2 es mayor a n1 ya que la primera condicion de dar falso significa que n2 es igual o mayor a n1, en el caso de no querer escribir en max un valor si n1 = n2, entonces se puede usar otro si"},
+                    {"type":"code", "content":"si (n1>n2)\n max:= n1\nsino\n si(n2>n1)\n    max:= n2"},
+                    {"type":"paragraph", "content":"Otra variante del mismo efecto"},
+                    {"type":"code", "content":"si (n1>n2)\n max:= n1\nsino\n si(n2<>n1)\n    max:= n2"},
+
+                    {"type":"secondarySubtitle", "content":"Instruccion mientras"},
+                    {"type":"paragraph", "content":"La instruccion mientras se utiliza para ejecutar cierto bloque de codigo que este identado debajo de esta tantas veces como la condicion que evalua el mientras de verdad, en caso contrario no ejecuta el codigo y sigue con lo que este por fuera\nEstructura del mientras"},
+                    {"type":"code", "content":"mientras ( cantidad )\n   bloque de codigo\n  a ejecutar"},
+                    {"type":"paragraph", "content":"Un ejemplo es multiplicar un numero por si mismo mientras no supere un maximo o se multiplique un maximo de 5 veces"},
+                    {"type":"code", "content":"mientras ((n1<max) | (cont < 5))\n n:= n*n\n  cont:= cont+1"},
+
+                    {"type":"secondarySubtitle", "content":"Instruccion repetir"},
+                    {"type":"paragraph", "content":"La instruccion repetir se utiliza para ejecutar cierto bloque de codigo que este identado debajo de esta tantas veces como lo indique la variable o valor explicito que presigue a la instruccion\nEstructura del repetir"},
+                    {"type":"code", "content":"repetir ( cantidad )\n   bloque de codigo\n  a ejecutar"},
+                    {"type":"paragraph", "content":"Un ejemplo es calcular la potencia de cierto numero"},
+                    {"type":"code", "content":"repetir (exponente)\n res:= res*base"}
+                ]
+            },
+            {"type":"subtitle",
+                "content":"Estado",
+                "elements":[
+                    {"type":"paragraph", "content":"Las instrucciones de estado son las que devuelven un dato que representa el estado de cierta caracteristica del robot con respecto al mapa o a su inventario\nRespecto del mapa existen las instrucciones"},
+                    {"type":"table", "content":[["sintaxis", "Tipo de dato que devuelve","Descripcion"], ["PosAv","numero","El numero representa la avenida actual del robot"],["PosCa","numero","El numero representa la calle actual del robot"],["HayFlorEnLaEsquina","boolean","El booleano representa si hay una flor en la esquina actual"],["HayPapelEnLaEsquina","boolean","El booleano representa si hay un papel en la esquina actual"]]},
+                    {"type":"paragraph","content":"Repecto del inventario existen las intrucciones"},
+                    {"type":"table", "content":[["sintaxis", "Tipo de dato que devuelve","Descripcion"], ["HayFlorEnLaBolsa","boolean","El booleano representa si hay una flor en el inventario"],["HayPapelEnLaBolsa","boolean","El booleano representa si hay un papel en el inventario"]]}
+                ]
+            },
+            {"type":"subtitle",
+                "content":"Accion",
+                "elements":[
+                    {"type":"paragraph", "content":"Las instrucciones de accion son las que permiten al robot la interaccion de su inventario con respecto al mapa y viseversa\nExisten las siguientes instruccion"},
+                    {"type":"table", "content":[["sintaxis", "Accion"], ["tomarFlor","toma una flor de la esquina actual y la guarda en el inventario"],["tomarPapel", "toma un papel de la esquina actual y lo guarda en el inventario"],["depositarFlor", "deposita una flor del inventario en la esquina actual"],["depositarPapel", "deposita un papel del inventario en la esquina actual"]]}
+                ]
+            },
+            {"type":"subtitle",
+                "content":"Desplazamiento",
+                "elements":[
+                    {"type":"paragraph", "content":"Para el desplazamiento del robot en el mapa existen las siguientes instrucciones"},
+                    {"type":"table", "content":[["sintaxis"], ["mover"],["derecha"],["Pos(avenida, calle)"]]},
+
+                    {"type":"secondarySubtitle", "content":"Instruccion mover"},
+                    {"type":"paragraph","content":"La instruccion mover se utiliza para desplazar al robot 1 posicion en la direccion que se encuentre mirando"},
+                    {"type":"table", "content":[["Direccion", "Posicion resultado"], ["arriba","avenidaActual +1, calleActual"],["derecha", "avenidaActual, calleActual +1"],["abajo", "avenidaActual -1, calleActual"],["izquierda", "avenidaActual, calleActual -1"]]},
+                    
+                    {"type":"secondarySubtitle", "content":"Instruccion derecha"},
+                    {"type":"paragraph","content":"La instruccion derecha se utiliza para cambiar la direccion que se encuentra mirando por la consecutiva en sentido horario"},
+                    {"type":"table", "content":[["Direccion base", "Direccion resultado"], ["arriba","derecha"],["derecha", "abajo"],["abajo", "izquierda"],["izquierda", "arriba"]]},
+
+                    {"type":"secondarySubtitle", "content":"Instruccion Pos"},
+                    {"type":"paragraph","content":"La instruccion Pos se utiliza para ubicar al robot en un par ( avenida, calle ) determinado"},
+                    {"type":"table", "content":[["Sintaxis"], ["Pos( numeroDeAvenida, numeroDeCalle )"]]},
+                    {"type":"code", "content":"Pos( 1, 33 ) resulta en que el robot ahora se encuentra en la avenida 1 y calle 33\nPos( 50, 50 ) resulta en que el robot ahora se encuentra en la avenida 50 y calle 50\nPos( -88, 45 ) resulta en error ya que el numero de avenida debe estar dentro del rango 1 - 100"}
+                ]
+            },
+            {"type":"subtitle",
+                "content":"Comunicacion",
+                "elements":[
+                    {"type":"paragraph", "content":"La comunicacion es la tranferencia de mensajes hacia el usuario o entre robots\nLas instrucciones son"},
+                    {"type":"list", "content":["Informar","EnviarMensaje", "RecibirMensaje"]},
+
+                    {"type":"secondarySubtitle", "content":"Instruccion Informar"},
+                    {"type":"paragraph", "content":"Para la comunicacion con el usuario, en otras palabras mostrar informacion en pantalla, existe la instruccion Informar"},
+                    {"type":"table", "content":[["Sintaxis"], ["Informar( 'cadenaDeCaracteres', valor )"]]},
+                    {"type":"paragraph","content":"Ejemplo de uso"},
+                    {"type":"code", "content":"Informar( 16 )\nInformar( 'minimo', cantMin )\nInformar( V )\nInformar( floresJuntadas )\n"},
+
+                    {"type":"secondarySubtitle", "content":"Instruccion EnviarMensaje"},
+                    {"type":"paragraph", "content":"Esta instruccion se utiliza para enviar un valor a un receptor determinado, siendo una variable robot el receptor"},
+                    {"type":"table", "content":[["Sintaxis"], ["EnviarMensaje( valor, nombreVariableRobot )"]]},
+                    {"type":"paragraph","content":"Esta instruccion es asincronica, es decir, se ejecuta y continua la ejecucion. Al emisor del mensaje no le afecta si el receptor esta esperando o no el mensaje\nEjemplo de uso"},
+                    {"type":"code", "content":"EnviarMensaje( 16, robot1 )\nEnviarMensaje( min, trabajador )\nInformar( V )\nEnviarMensaje( V, organizador )\n"},
+
+                    {"type":"secondarySubtitle", "content":"Instruccion RecibirMensaje"},
+                    {"type":"paragraph", "content":"Esta instruccion se utiliza para recibir un valor de un emisor determinado o no determinado, siendo una variable robot el emisor"},
+                    {"type":"table", "content":[["Sintaxis","Emisor"], ["RecibirMensaje( variableReceptora, nombreEmisor )","especifico"],["RecibirMensaje( variableReceptora, * )","cualquiera"]]},
+                    {"type":"paragraph","content":"Esta instruccion es sincronica, es decir, hasta no recibir el mensaje esperado no continua la ejecucion del codigo\nEl primer parametro es una variable donde se guardara el valor que se envio en el mensaje, esta variable debe ser del mismo tipo que el valor enviado\nSi se especifica un emisor puntual el robot que ejecuta la instruccion quedara esperando el mensaje en el caso de que este no este en la cola de mensaje del robot\nEjemplo de uso"},
+                    {"type":"code", "content":"RecibirMensaje( numAvenida, coordinador )\nRecibirMensaje( continuar, jefe )"},
+                    {"type":"paragraph","content":"Si no se especifica un emisor puntual el robot que ejecuta la instruccion quedara esperando un mensaje de cualquier emisor en el caso de que no haya ninguno en la cola de mensaje del robot\nEjemplo de uso"},
+                    {"type":"code", "content":"RecibirMensaje( codigo, * )\nRecibirMensaje( parar, * )"}
+                ]
+            },
+            {"type":"subtitle",
+                "content":"Generacion",
+                "elements":[
+                    {"type":"paragraph", "content":"Sobre generacion existe una unica instruccion para generar valores de tipo numero aleatorios dentro de un rango indicado\nLa instruccion es"},
+                    {"type":"table", "content":[["sintaxis"], ["Random( variableReceptora, valorMinimo, valorMaximo )"]]},
+                    {"type":"paragraph","content":"Ejemplo de uso"},
+                    {"type":"code", "content":"Random( avRandom, 1, 50 )\nRandom( cant, 10, max )"}
                 ]
             }
         ]
