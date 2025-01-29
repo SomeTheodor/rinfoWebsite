@@ -106,7 +106,12 @@
                         {"type":"secondarySubtitle", "content":"Operador :"},
                         { "type": "paragraph", "content": "El : se utiliza para decir que x variable sera de cierto tipo" },
                         {"type":"table", "content":[["Utilizacion"],["(nombre variable) : (tipo de dato)"]]},
-                        {"type":"code", "content":"num: numero; cond: boolean;"}
+                        {"type":"code", "content":"num: numero; cond: boolean;"},
+
+                        {"type":"secondarySubtitle", "content":"Operador :="},
+                        { "type": "paragraph", "content": "El := se utiliza para decir que x variable asumira un valor respetando el tipo de dato que representa la variable" },
+                        {"type":"table", "content":[["Utilizacion"],["(nombre variable) := (valor a dar)"]]},
+                        {"type":"code", "content":"num:= 28; cond:=V;"}
                     ]
                 },
                 {
@@ -121,9 +126,13 @@
                         { "type": "paragraph", "content": "Ejemplo con numeros y booleanos" },
                         {"type":"paragraph","content":"Normalmente se realizan operaciones aritmeticas y a esos resultados se aplican operadores logicos correspondientes de manera que el resultado final sean valores booleanos que reflejen un estado"},
                         {"type":"code", "content":"Se quiere saber si el doble de 10 es menor a la mitad de 34\n2 * 10 < 34 / 2 = V, esto da como resultado Verdadero"},
-                        {"type":"paragraph","content":"El resultado de lo anterior deberia ser falso si no fuera por el echo de que no queda claro el orden de las operaciones, para eso se utilizan los ( )"},
-                        {"type":"secondarySubtitle", "content":"Parentesis"},
-                        { "type": "paragraph", "content": "Los parentesis son de gran importancia ya que permiten denotar prioridad a la hora de la resolucion de un encadenamiento de operaciones, como se bio anteriormente en determinadas circunstancias es necesario indicar la prioridad para una correcta operacion y tambien para evitar confusiones\nReestructuracion de ejemplo previo" },
+                        {"type":"paragraph","content":"El resultado de lo anterior deberia ser falso si no fuera por el echo de que no queda claro el orden de las operaciones, para eso se utilizan los ( )"}
+                        
+                    ]
+                },
+                {"type":"subtitle", "content":"Parentesis",
+                "elements":[
+                    { "type": "paragraph", "content": "Los parentesis son de gran importancia ya que permiten denotar prioridad a la hora de la resolucion de un encadenamiento de operaciones, como se bio anteriormente en determinadas circunstancias es necesario indicar la prioridad para una correcta operacion y tambien para evitar confusiones\nReestructuracion de ejemplo previo" },
                         {"type":"code","content":"Se quiere saber si el doble de 10 es menor a la mitad de 34\n( 2 * 10 ) < ( 34 / 2 ) = V , el resultado es F"},
                         { "type": "paragraph", "content": "Ahora queda claro que primero deben resolverse las operaicones aritmeticas y luego las logicas\nLa utilizacion de parentesis permite realizar encadenamiento de operaciones mas complejas\nPor ejemplo"},
                         {"type":"code", "content":"Se quiere saber si dos valores son V o si es V la negacion de un tercero o el valor de un cuarto\n( F & V ) | ( ( ~ V ) | V ), el resultado es V"},
@@ -131,7 +140,7 @@
                         { "type": "paragraph", "content": "El : se utiliza para decir que x variable sera de cierto tipo" },
                         {"type":"table", "content":[["Utilizacion"],["(nombre variable) : (tipo de dato)"]]},
                         {"type":"code", "content":"num: numero; cond: boolean;"}
-                    ]
+                ]
                 }
             ]
     },
@@ -280,6 +289,85 @@
                     {"type":"table", "content":[["sintaxis"], ["Random( variableReceptora, valorMinimo, valorMaximo )"]]},
                     {"type":"paragraph","content":"Ejemplo de uso"},
                     {"type":"code", "content":"Random( avRandom, 1, 50 )\nRandom( cant, 10, max )"}
+                ]
+            }
+        ]
+    },
+    {
+        "type":"title", "content":"Secciones",
+        "elements":[
+            {"type":"paragraph", "content":"Un programa en este lenguage se constituye de secciones ( detalladas a continuacion ) que se encargan cada una de definir un aspecto del programa\nEstas se dividen en"},
+            {"type":"list", "content":["programa","procesos","areas","robots","variables","Comenzar y fin"]}
+        ], "subtitles":[
+            {
+                "type":"subtitle", "content":"Programa",
+                "elements":[
+                    {"type":"paragraph","content":"Esta es la seccion donde se le asigna un nombre al programa\nEstructura"},
+                    {"type":"code", "content":"programa nombre_del_programa"},
+                    {"type":"paragraph","content":"El nombre del programa puede estar constituido por:"},
+                    {"type":"list", "content":["Letras minusculas y MAYUSCULAS","Numeros","Guiones medios '-' y bajos '_'"]},
+                    {"type":"paragraph","content":"Ejemplo de uso"},
+                    {"type":"code", "content":"programa ejercicio_1\nprograma TP1-E3"}
+                ]
+            },
+            {
+                "type":"subtitle", "content":"Procesos",
+                "elements":[
+                    {"type":"paragraph","content":"Esta es la seccion donde se crean modulos, estos pueden tener o no parametros\nEstructura"},
+                    {"type":"code", "content":"procesos\n   proceso nombreDelModulo( parametros )\n declaracion de variables locales al modulo\ncomenzar\n  algoritmo que realiza el modulo\nfin"},
+                    {"type":"paragraph","content":"El nombreDelModulo es lo que permite el llamado al modulo, en otras palabras lo que permite que se ejecute el codigo dentro de este\nPara una comunicacion de datos entre el algoritmo del modulo y el lugar donde se lo llama se utilizan los parametros\nPara una comunicacion de datos entre el algoritmo del modulo y el lugar donde se lo llama se utilizan los parametros\n"},
+                    {"type":"list", "content":["Letras minusculas y MAYUSCULAS","Numeros","Guiones medios '-' y bajos '_'"]},
+                    {"type":"paragraph","content":"Ejemplo de uso"},
+                    {"type":"code", "content":"programa ejercicio_1\nprograma TP1-E3"}
+                ]
+            },
+            {
+                "type":"subtitle", "content":"Areas",
+                "elements":[
+                    {"type":"paragraph","content":"Esta es la seccion donde se crean areas del mapa donde los robots podran interactuar. Las areas son regiones cuadradas del mapa donde las avenidas y calles que componen cada una solo pueden estar incluidas en una unica declaracion de area\nEstructura"},
+                    {"type":"code", "content":"areas\n  nombreArea : tipoDeArea( region )"},
+                    {"type":"paragraph","content":"El nombre del area es lo que permite mas adelante referenciar esta definicion en la asignacion de areas de un robot\nExisten tres tipos de areas:"},
+                    {"type":"list", "content":["AreaC: Area compartida","AreaP: Area privada","AreaPC:Area parcialmente compartida"]},
+                    {"type":"secondarySubtitle","content":"AreaC"},
+                    {"type":"paragraph", "content":"Este tipo es para definir que cierta region es compartida por los robots, esto quiere decir que a todos los robots se le asiganara esta area, consecuentemente quiere decir que podran interactuar en esta region"},
+                    {"type":"secondarySubtitle","content":"AreaP"},
+                    {"type":"paragraph", "content":"Este tipo es para definir que cierta region es de un unico robot, esto quiere decir que solo a un robot se le asignara esta area, consecuentemente este es el unico que podra interactuar en esta region"},
+                    {"type":"secondarySubtitle","content":"AreaPC"},
+                    {"type":"paragraph", "content":"Este tipo es para definir que cierta region es compartida por al menos dos robots y no es compartida por al menos un robot, esto quiere decir que se le asigna a almenos 2 robots y a almenos 1 no"},
+
+                    {"type":"paragraph", "content":"La region es un cuadrado que se delimita por dos conjuntos:"},
+                    {"type":"list", "content":["Avenida y calle inicial", "Avenida y calle final"]},
+                    {"type":"paragraph", "content":"En ambos casos la avenida y calle estan incluidas en la region\nSe declara de la siguiente manera"},
+                    {"type":"code", "content":"( avenidaInicial, calleInicial, avenidaFinal, calleFinal )"},
+                    {"type":"paragraph", "content":"Ejemplo de uso"},
+                    {"type":"code", "content":"areas\n  area1 : AreaC( 1, 1, 1, 1 )\n   zonaPrivada : AreaP( 11, 1, 100, 10 )\n areaTrabajo : AreaPC( 50, 50, 55, 60 )"}
+                ]
+            },
+            {
+                "type":"subtitle", "content":"Robots",
+                "elements":[
+                    {"type":"paragraph","content":"Esta es la seccion donde se definene los algoritmos que un cierto tipo de robot tendra que hacer durante la ejecucion del programa\nEstructura"},
+                    {"type":"code", "content":"robots\n robot nombreTipoRobot\n variables\n     en el caso\n        de que se necesiten\n   comenzar\n      instrucciones que componen\n        el algoritmo para este tipo de robot\n  fin"},
+                    {"type":"paragraph","content":"Cuando se declara el tipo de robot la seccion de variables solo debe ser agregada en el caso que el robot necesite variables numericas y/o booleanas de lo contrario no es necesario que este\nEn el apartado comenzar ... fin es similar a el comenzar ... fin de la seccion de procesos ya que es donde se crea el algoritmo del robot el cual al momento d ela ejecucion del programa se usara para que el robot realize tareas como moverse, interactuar con el mapa, realizar operaciones aritmeticas/logicas, comunicacion entre otras\nNormalmente un tipo de robot se define para un labor especifica que puede englobar tareas asociadas a esta labor, si se quiere hacer un uso optimo de los tipos de robot se descompone el problema en labores y se las asigna a diferentes robots para distribuir la carga de manera que se responda a la problematica de manera eficiente\nEjemplo de uso"},
+                    {"type":"code", "content":"robots\n robot corredorAvenida\n comenzar\n      mientras (PosCa < 100)\n            mover\n     Informar('LlegueALaCalle',100)\n    fin\n   robot contadorFlores\n  variables\n     flores: numero\n    comenzar\n      flores:= 0\n        repetir 9\n         repetir 15\n                juntarFlores(flores)\n              mover\n         juntarFlores(flores)\n          Pos(PosAv + 1, 1)\n     fin"}
+                ]
+            },
+            {
+                "type":"subtitle", "content":"Variables",
+                "elements":[
+                    {"type":"paragraph","content":"Esta es la seccion donde se declaran las variables robot de un determinado tipo de robot cada una\nLas variables robot son las que se encargan de ejecutar los algoritmos que se definen en el programa\nEstructura"},
+                    {"type":"code", "content":"variables\n  nombreVariableRobot: nombreTipoRobot"},
+                    {"type":"paragraph","content":"El nombreVariableRobot es el nombre que tendra el robot durante la ejecucion\nEl nombreTipoRobot es el nombre con el cual se definio un tipo de robot en la seccion de robots\nEjemplo de uso"},
+                    {"type":"code", "content":"variables\n  robot1: trabajador\n    padre: recolector\n    rJefe: coordinador"}
+                ]
+            },
+            {
+                "type":"subtitle", "content":"Comenzar y Fin",
+                "elements":[
+                    {"type":"paragraph","content":"Esta es la seccion donde se le asignan las areas correspondientes a cada variable robot y ademas su correspondiente posicionamiento inicial en el mapa\nEstructura"},
+                    {"type":"code", "content":"comenzar\n   AsignarArea( nombreVariableRobot, nombreArea )\n    Iniciar( nombreVariableRobot, avenida, calle )\nfin"},
+                    {"type":"paragraph","content":"A una variable robot se le pueden asignar multiples areas (siempre y cuando se respete el tipo de area definido) pero unicamente se incia en un punto del mapa\nEjemplo de uso:"},
+                    {"type":"code", "content":"comenzar\n  AsignarArea( robot4, cuadrante )\n    AsignarArea( robot4, puntoPartida )\n    AsignarArea( jefe, areaJefe )\n  Iniciar( jefe, 1, 1 )\n    Iniciar( robot4, 50, 1 )\nfin"}
                 ]
             }
         ]
