@@ -1,149 +1,165 @@
 [
-    {
-        "type": "title",
-        "content": "Que es R-Info?",
-        "elements": [
-            { "type": "paragraph", "content": "R-Info es un entorno de programacion donde se aprende conceptos basicos sobre como se constituye un programa y como se escribe uno, esto lo hace de manera sencilla ( con instrucciones y datos elementales o basicos en idioma español ) y didacticamente al ser un robot o varios, ubicado dentro de un mapa, el que realiza el algoritmo creado por programador" }
-        ]
-    },
-    {
-        "type": "title",
-        "content": "Tipos de datos",
-        "elements": [
-            { "type": "paragraph", "content": "Para trabajar con informacion o valores se disponen dos formas de representacion" }
-            ],
-            "subtitles": [
-                {
-                    "type": "subtitle",
-                    "content": "Numeros",
-                    "elements": [
-                        { "type": "paragraph", "content": "El tipo de dato numero se utiliza para representar cantidades, es decir, como los el conjunto de los numeros enteros en matematica." },
-                        { "type": "paragraph", "content": "Estos van desde el -2^31 ( -2.147.483.648 ) hasta el 2^31 ( 2.147.483.648 )." }
-                    ]
-                },
-                {
-                    "type": "subtitle",
-                    "content": "Booleanos",
-                    "elements": [
-                        { "type": "paragraph", "content": "El tipo de dato booleano se utiliza para representar si algo es verdad o si algo es falso, es decir, la veracidad de una afirmacion o sentencia" },
-                        { "type": "paragraph", "content": "Sus dos unicos posible valores son" },
-                        { "type": "list", "content": ["'V' para la Verdad", "'F' para la Falsedad"] },
-                        { "type": "paragraph", "content": "Tambien se usan para representar: " },
-                        { "type": "list", "content": ["Existencia o inexistencia", "Permitido/habilitado o no permitido/no habilitado"] }
-                    ]
-                }
+        {
+            "type": "title",
+            "content": "Que es R-Info?",
+            "elements": [
+                { "type": "paragraph", "content": "R-Info es un entorno de programacion donde se aprende conceptos basicos sobre como se constituye un programa y como se escribe uno, esto lo hace de manera sencilla ( con instrucciones y datos elementales o basicos en idioma español ) y didacticamente al ser un robot o varios, ubicado dentro de un mapa, el que realiza el algoritmo creado por programador" }
             ]
-    },
-    {
-        "type": "title",
-        "content": "Operadores",
-        "elements": [
-            { "type": "paragraph", "content": "Dentro de la sintaxis del lenguaje se encuentran los operadores que son un conjunto de caracteres que permiten la manipulacion y/o comparacion de valores explicitos o en variables" }
+        },
+        {
+            "type":"title", "content":"Instalacion", "elements":[
+                {"type":"paragraph", "content":"Para la instalacion, se debe tener en cuenta que existen dos archivos para los sistemas de Windows y Linux, descargue el .jar correspondiente a su sistema operativo y proceda con la instalacion"}
             ],
-            "subtitles": [
-                {
-                    "type": "subtitle",
-                    "content": "Logicos",
-                    "elements": [
-                        { "type": "paragraph", "content": "Los operadores logicos dan como resultado valores booleanos, es decir, verdad o falsedad dependiendo de las entradas" },
-                        { "type": "paragraph", "content": "Operadores para datos booleanos:" },
-                        {"type":"table", "content":[["sintaxis","nombre/s"],["~","negacion , no"],["|","disyuncion, ó"],["&","conjuncion, y"],["=", "igualdad, igual"],["<>","diferente, distinto"]]},
-                        { "type": "paragraph", "content": "Operadores para datos numericos:" },
-                        {"type":"table", "content":[["sintaxis","nombre/s"],["=","igualacion, igual"],["<","menor"],[">","mayor"],["<=", "menor ó igual"],[">=", "mayor ó igual"],["<>","diferente, distinto"]]},
-                        {"type":"secondarySubtitle", "content":"Operador ~"},
-                        { "type": "paragraph", "content": "El no es un operador unario (se aplica en solo un valor), este cambia el valor logico al opuesto" },
-                        { "type": "paragraph", "content": "Su tabla de verdad es:" },
-                        {"type":"table", "content":[["Entrada","Resultado"],["~F","v"],["~V","F"]]},
-                        {"type":"secondarySubtitle", "content":"Operador |"},
-                        {"type":"paragraph", "content":"El o es un operador binario (se aplica entre dos valores), este da como resultado verdad si almenos uno de los valores es verdad"},
-                        { "type": "paragraph", "content": "Su tabla de verdad es:" },
-                        {"type":"table", "content":[["Entrada","Resultado"],["F|F","F"],["V|F","V"],["F|V","V"],["V|V","V"]]},
-                        {"type":"secondarySubtitle", "content":"Operador &"},
-                        {"type":"paragraph", "content":"El y es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si ambos valores son verdad"},
-                        { "type": "paragraph", "content": "Su tabla de verdad es:" },
-                        {"type":"table", "content":[["Entrada","Resultado"],["F&F","F"],["V&F","F"],["F&V","F"],["V&V","V"]]},
-                        {"type":"secondarySubtitle", "content":"Operador ="},
-                        {"type":"paragraph", "content":"El igual es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si ambos valores son iguales respetando que sean el mismo tipo de dato"},
-                        { "type": "paragraph", "content": "Su tabla de verdad con valores booleanos es:" },
-                        {"type":"table", "content":[["Entrada","Resultado"],["F=F","F"],["V=F","F"],["F=V","F"],["V=V","V"]]},
-                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
-                        {"type":"table", "content":[["Entrada","Resultado"],["2=2","V"],["5=18","F"],["-95=4","F"],["-1=-1","V"]]},
-                        {"type":"secondarySubtitle", "content":"Operador <>"},
-                        {"type":"paragraph", "content":"El diferente es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si ambos valores son distintos respetando que sean el mismo tipo de dato"},
-                        { "type": "paragraph", "content": "Su tabla de verdad con valores booleanos es:" },
-                        {"type":"table", "content":[["Entrada","Resultado"],["F<>F","F"],["V<>F","V"],["F<>V","V"],["V<>V","F"]]},
-                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
-                        {"type":"table", "content":[["Entrada","Resultado"],["2=2","F"],["5<>18","V"],["-95<>4","V"],["-1<>-1","F"]]},
-                        {"type":"secondarySubtitle", "content":"Operador <"},
-                        {"type":"paragraph", "content":"El menor es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si el primer valor es mas pequeño que el segundo"},
-                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
-                        {"type":"table", "content":[["Entrada","Resultado"],["2<2","F"],["4<23","V"],["65<-1","F"],["-5<-1","V"]]},
-                        {"type":"secondarySubtitle", "content":"Operador >"},
-                        {"type":"paragraph", "content":"El mayor es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si el primer valor es mas grande que el segundo"},
-                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
-                        {"type":"table", "content":[["Entrada","Resultado"],["2>2","F"],["4>23","F"],["65>-1","V"],["-1>-5","V"]]},
-                        {"type":"secondarySubtitle", "content":"Operador <="},
-                        {"type":"paragraph", "content":"El menor o igual es un operador binario (se aplica entre dos valores), este da como resultado verdad si primer valor es mas pequeño que el segundo o si los dos valores son iguales"},
-                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
-                        {"type":"table", "content":[["Entrada","Resultado"],["2<=2","V"],["4<=23","V"],["65<=-1","F"],["-1<=-1","V"]]},
-                        {"type":"secondarySubtitle", "content":"Operador >="},
-                        {"type":"paragraph", "content":"El mayor o igual es un operador binario (se aplica entre dos valores), este da como resultado verdad si primer valor es mas grande que el segundo o si los dos valores son iguales"},
-                        { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
-                        {"type":"table", "content":[["Entrada","Resultado"],["2>=2","V"],["4>=23","F"],["65>=-1","V"],["-1>=-1","V"]]}
-                    ]
+            "subtitles":[
+                {"type":"subtitle", "content":"Windows", "elements":[
+                    {"type":"paragraph","content":"Basta con instalar el archivo haciendo doble click sobre el mismo"}
+                ]
                 },
-                {
-                    "type": "subtitle",
-                    "content": "Aritmeticos",
-                    "elements": [
-                        { "type": "paragraph", "content": "Los operadores aritmeticos dan como resultado valores numericos enteros dependiendo de las entradas" },
-                        { "type": "paragraph", "content": "Operadores:" },
-                        {"type":"table", "content":[["sintaxis","Funcion"],["+","adicion , suma"],["-","sustraccion , resta"],["*","producto , multiplicacion"],["/", "division"]]},
-                        {"type":"secondarySubtitle", "content":"Asignacion"},
-                        { "type": "paragraph", "content": "Los operadores de asignacion se utilizan para decir el tipo de dato de una variable o para darle el valor a una variable" },
-                        { "type": "paragraph", "content": "Operadores:" },
-                        {"type":"table", "content":[["Sintaxis","Funcion"],[":","Asignacion"],[":=","Asignacion"]]},
-                        {"type":"secondarySubtitle", "content":"Operador :"},
-                        { "type": "paragraph", "content": "El : se utiliza para decir que x variable sera de cierto tipo" },
-                        {"type":"table", "content":[["Utilizacion"],["(nombre variable) : (tipo de dato)"]]},
-                        {"type":"code", "content":"num: numero; cond: boolean;"},
-
-                        {"type":"secondarySubtitle", "content":"Operador :="},
-                        { "type": "paragraph", "content": "El := se utiliza para decir que x variable asumira un valor respetando el tipo de dato que representa la variable" },
-                        {"type":"table", "content":[["Utilizacion"],["(nombre variable) := (valor a dar)"]]},
-                        {"type":"code", "content":"num:= 28; cond:=V;"}
-                    ]
-                },
-                {
-                    "type": "subtitle",
-                    "content": "Encadenamiento",
-                    "elements": [
-                        { "type": "paragraph", "content": "Como en las matematicas se pueden armar ecuaciones con valores y operaciones, esto no es la exepcion, por ende para encadenar operaciones solo se necesitan los valores/variables y operaciones que operen con estos" },
-                        { "type": "paragraph", "content": "Ejemplo con numeros" },
-                        {"type":"code", "content":"Si se quiere sumar el doble de 9 con la mitad de 16, se debe hacer\n2*9 + 16 / 2, esto da como resultado 26"},
-                        { "type": "paragraph", "content": "Ejemplo con booleanos" },
-                        {"type":"code", "content":"Si se quiere saber si dos valores son verdaderos o un tercero negado es verdadero se deb hacer\nV & F | ~ F , esto da como resultado V"},
-                        { "type": "paragraph", "content": "Ejemplo con numeros y booleanos" },
-                        {"type":"paragraph","content":"Normalmente se realizan operaciones aritmeticas y a esos resultados se aplican operadores logicos correspondientes de manera que el resultado final sean valores booleanos que reflejen un estado"},
-                        {"type":"code", "content":"Se quiere saber si el doble de 10 es menor a la mitad de 34\n2 * 10 < 34 / 2 = V, esto da como resultado Verdadero"},
-                        {"type":"paragraph","content":"El resultado de lo anterior deberia ser falso si no fuera por el echo de que no queda claro el orden de las operaciones, para eso se utilizan los ( )"}
-                        
-                    ]
-                },
-                {"type":"subtitle", "content":"Parentesis",
-                "elements":[
-                    { "type": "paragraph", "content": "Los parentesis son de gran importancia ya que permiten denotar prioridad a la hora de la resolucion de un encadenamiento de operaciones, como se bio anteriormente en determinadas circunstancias es necesario indicar la prioridad para una correcta operacion y tambien para evitar confusiones\nReestructuracion de ejemplo previo" },
-                        {"type":"code","content":"Se quiere saber si el doble de 10 es menor a la mitad de 34\n( 2 * 10 ) < ( 34 / 2 ) = V , el resultado es F"},
-                        { "type": "paragraph", "content": "Ahora queda claro que primero deben resolverse las operaicones aritmeticas y luego las logicas\nLa utilizacion de parentesis permite realizar encadenamiento de operaciones mas complejas\nPor ejemplo"},
-                        {"type":"code", "content":"Se quiere saber si dos valores son V o si es V la negacion de un tercero o el valor de un cuarto\n( F & V ) | ( ( ~ V ) | V ), el resultado es V"},
-                        {"type":"secondarySubtitle", "content":"Operador :"},
-                        { "type": "paragraph", "content": "El : se utiliza para decir que x variable sera de cierto tipo" },
-                        {"type":"table", "content":[["Utilizacion"],["(nombre variable) : (tipo de dato)"]]},
-                        {"type":"code", "content":"num: numero; cond: boolean;"}
+                {"type":"subtitle", "content":"Linux", "elements":[
+                    {"type":"paragraph","content":"Para ejecutarlo vamos a trabajar desde la consola para iniciarla podes hacerlo con Ctrl+Alt+t\nPrimero es necesario instalar la maquina virtual de java denominado JRE o Java Runtime Enviroment que provee todas las dependencias necesarias para ejecutar una aplicación java, esto lo pueden hacer ejecutando ' sudo apt install default-jre ' para ubuntu o debian, si tenes otra distro te recomendamos que busques como instalar la misma en tu SO.\nPara ejecutar la aplicación hay que darle permisos de ejecución con el comando ' chmod +x nombre_del_archivo.jar ' después de esto esta listo para ejecutarlo y eso se hace desde consola con ' java -jar nombre_del_archivo.jar '"}
                 ]
                 }
+
             ]
-    },
+        },
+        {
+            "type": "title",
+            "content": "Tipos de datos",
+            "elements": [
+                { "type": "paragraph", "content": "Para trabajar con informacion o valores se disponen dos formas de representacion" }
+                ],
+                "subtitles": [
+                    {
+                        "type": "subtitle",
+                        "content": "Numeros",
+                        "elements": [
+                            { "type": "paragraph", "content": "El tipo de dato numero se utiliza para representar cantidades, es decir, como los el conjunto de los numeros enteros en matematica." },
+                            { "type": "paragraph", "content": "Estos van desde el -2^31 ( -2.147.483.648 ) hasta el 2^31 ( 2.147.483.648 )." }
+                        ]
+                    },
+                    {
+                        "type": "subtitle",
+                        "content": "Booleanos",
+                        "elements": [
+                            { "type": "paragraph", "content": "El tipo de dato booleano se utiliza para representar si algo es verdad o si algo es falso, es decir, la veracidad de una afirmacion o sentencia" },
+                            { "type": "paragraph", "content": "Sus dos unicos posible valores son" },
+                            { "type": "list", "content": ["'V' para la Verdad", "'F' para la Falsedad"] },
+                            { "type": "paragraph", "content": "Tambien se usan para representar: " },
+                            { "type": "list", "content": ["Existencia o inexistencia", "Permitido/habilitado o no permitido/no habilitado"] }
+                        ]
+                    }
+                ]
+        },
+        {
+            "type": "title",
+            "content": "Operadores",
+            "elements": [
+                { "type": "paragraph", "content": "Dentro de la sintaxis del lenguaje se encuentran los operadores que son un conjunto de caracteres que permiten la manipulacion y/o comparacion de valores explicitos o en variables" }
+                ],
+                "subtitles": [
+                    {
+                        "type": "subtitle",
+                        "content": "Logicos",
+                        "elements": [
+                            { "type": "paragraph", "content": "Los operadores logicos dan como resultado valores booleanos, es decir, verdad o falsedad dependiendo de las entradas" },
+                            { "type": "paragraph", "content": "Operadores para datos booleanos:" },
+                            {"type":"table", "content":[["sintaxis","nombre/s"],["~","negacion , no"],["|","disyuncion, ó"],["&","conjuncion, y"],["=", "igualdad, igual"],["<>","diferente, distinto"]]},
+                            { "type": "paragraph", "content": "Operadores para datos numericos:" },
+                            {"type":"table", "content":[["sintaxis","nombre/s"],["=","igualacion, igual"],["<","menor"],[">","mayor"],["<=", "menor ó igual"],[">=", "mayor ó igual"],["<>","diferente, distinto"]]},
+                            {"type":"secondarySubtitle", "content":"Operador ~"},
+                            { "type": "paragraph", "content": "El no es un operador unario (se aplica en solo un valor), este cambia el valor logico al opuesto" },
+                            { "type": "paragraph", "content": "Su tabla de verdad es:" },
+                            {"type":"table", "content":[["Entrada","Resultado"],["~F","v"],["~V","F"]]},
+                            {"type":"secondarySubtitle", "content":"Operador |"},
+                            {"type":"paragraph", "content":"El o es un operador binario (se aplica entre dos valores), este da como resultado verdad si almenos uno de los valores es verdad"},
+                            { "type": "paragraph", "content": "Su tabla de verdad es:" },
+                            {"type":"table", "content":[["Entrada","Resultado"],["F|F","F"],["V|F","V"],["F|V","V"],["V|V","V"]]},
+                            {"type":"secondarySubtitle", "content":"Operador &"},
+                            {"type":"paragraph", "content":"El y es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si ambos valores son verdad"},
+                            { "type": "paragraph", "content": "Su tabla de verdad es:" },
+                            {"type":"table", "content":[["Entrada","Resultado"],["F&F","F"],["V&F","F"],["F&V","F"],["V&V","V"]]},
+                            {"type":"secondarySubtitle", "content":"Operador ="},
+                            {"type":"paragraph", "content":"El igual es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si ambos valores son iguales respetando que sean el mismo tipo de dato"},
+                            { "type": "paragraph", "content": "Su tabla de verdad con valores booleanos es:" },
+                            {"type":"table", "content":[["Entrada","Resultado"],["F=F","F"],["V=F","F"],["F=V","F"],["V=V","V"]]},
+                            { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                            {"type":"table", "content":[["Entrada","Resultado"],["2=2","V"],["5=18","F"],["-95=4","F"],["-1=-1","V"]]},
+                            {"type":"secondarySubtitle", "content":"Operador <>"},
+                            {"type":"paragraph", "content":"El diferente es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si ambos valores son distintos respetando que sean el mismo tipo de dato"},
+                            { "type": "paragraph", "content": "Su tabla de verdad con valores booleanos es:" },
+                            {"type":"table", "content":[["Entrada","Resultado"],["F<>F","F"],["V<>F","V"],["F<>V","V"],["V<>V","F"]]},
+                            { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                            {"type":"table", "content":[["Entrada","Resultado"],["2=2","F"],["5<>18","V"],["-95<>4","V"],["-1<>-1","F"]]},
+                            {"type":"secondarySubtitle", "content":"Operador <"},
+                            {"type":"paragraph", "content":"El menor es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si el primer valor es mas pequeño que el segundo"},
+                            { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                            {"type":"table", "content":[["Entrada","Resultado"],["2<2","F"],["4<23","V"],["65<-1","F"],["-5<-1","V"]]},
+                            {"type":"secondarySubtitle", "content":"Operador >"},
+                            {"type":"paragraph", "content":"El mayor es un operador binario (se aplica entre dos valores), este da como resultado verdad si solo si el primer valor es mas grande que el segundo"},
+                            { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                            {"type":"table", "content":[["Entrada","Resultado"],["2>2","F"],["4>23","F"],["65>-1","V"],["-1>-5","V"]]},
+                            {"type":"secondarySubtitle", "content":"Operador <="},
+                            {"type":"paragraph", "content":"El menor o igual es un operador binario (se aplica entre dos valores), este da como resultado verdad si primer valor es mas pequeño que el segundo o si los dos valores son iguales"},
+                            { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                            {"type":"table", "content":[["Entrada","Resultado"],["2<=2","V"],["4<=23","V"],["65<=-1","F"],["-1<=-1","V"]]},
+                            {"type":"secondarySubtitle", "content":"Operador >="},
+                            {"type":"paragraph", "content":"El mayor o igual es un operador binario (se aplica entre dos valores), este da como resultado verdad si primer valor es mas grande que el segundo o si los dos valores son iguales"},
+                            { "type": "paragraph", "content": "Su tabla de verdad con valores numericos es:" },
+                            {"type":"table", "content":[["Entrada","Resultado"],["2>=2","V"],["4>=23","F"],["65>=-1","V"],["-1>=-1","V"]]}
+                        ]
+                    },
+                    {
+                        "type": "subtitle",
+                        "content": "Aritmeticos",
+                        "elements": [
+                            { "type": "paragraph", "content": "Los operadores aritmeticos dan como resultado valores numericos enteros dependiendo de las entradas" },
+                            { "type": "paragraph", "content": "Operadores:" },
+                            {"type":"table", "content":[["sintaxis","Funcion"],["+","adicion , suma"],["-","sustraccion , resta"],["*","producto , multiplicacion"],["/", "division"]]},
+                            {"type":"secondarySubtitle", "content":"Asignacion"},
+                            { "type": "paragraph", "content": "Los operadores de asignacion se utilizan para decir el tipo de dato de una variable o para darle el valor a una variable" },
+                            { "type": "paragraph", "content": "Operadores:" },
+                            {"type":"table", "content":[["Sintaxis","Funcion"],[":","Asignacion"],[":=","Asignacion"]]},
+                            {"type":"secondarySubtitle", "content":"Operador :"},
+                            { "type": "paragraph", "content": "El : se utiliza para decir que x variable sera de cierto tipo" },
+                            {"type":"table", "content":[["Utilizacion"],["(nombre variable) : (tipo de dato)"]]},
+                            {"type":"code", "content":"num: numero; cond: boolean;"},
+
+                            {"type":"secondarySubtitle", "content":"Operador :="},
+                            { "type": "paragraph", "content": "El := se utiliza para decir que x variable asumira un valor respetando el tipo de dato que representa la variable" },
+                            {"type":"table", "content":[["Utilizacion"],["(nombre variable) := (valor a dar)"]]},
+                            {"type":"code", "content":"num:= 28; cond:=V;"}
+                        ]
+                    },
+                    {
+                        "type": "subtitle",
+                        "content": "Encadenamiento",
+                        "elements": [
+                            { "type": "paragraph", "content": "Como en las matematicas se pueden armar ecuaciones con valores y operaciones, esto no es la exepcion, por ende para encadenar operaciones solo se necesitan los valores/variables y operaciones que operen con estos" },
+                            { "type": "paragraph", "content": "Ejemplo con numeros" },
+                            {"type":"code", "content":"Si se quiere sumar el doble de 9 con la mitad de 16, se debe hacer\n2*9 + 16 / 2, esto da como resultado 26"},
+                            { "type": "paragraph", "content": "Ejemplo con booleanos" },
+                            {"type":"code", "content":"Si se quiere saber si dos valores son verdaderos o un tercero negado es verdadero se deb hacer\nV & F | ~ F , esto da como resultado V"},
+                            { "type": "paragraph", "content": "Ejemplo con numeros y booleanos" },
+                            {"type":"paragraph","content":"Normalmente se realizan operaciones aritmeticas y a esos resultados se aplican operadores logicos correspondientes de manera que el resultado final sean valores booleanos que reflejen un estado"},
+                            {"type":"code", "content":"Se quiere saber si el doble de 10 es menor a la mitad de 34\n2 * 10 < 34 / 2 = V, esto da como resultado Verdadero"},
+                            {"type":"paragraph","content":"El resultado de lo anterior deberia ser falso si no fuera por el echo de que no queda claro el orden de las operaciones, para eso se utilizan los ( )"}
+                            
+                        ]
+                    },
+                    {"type":"subtitle", "content":"Parentesis",
+                    "elements":[
+                        { "type": "paragraph", "content": "Los parentesis son de gran importancia ya que permiten denotar prioridad a la hora de la resolucion de un encadenamiento de operaciones, como se bio anteriormente en determinadas circunstancias es necesario indicar la prioridad para una correcta operacion y tambien para evitar confusiones\nReestructuracion de ejemplo previo" },
+                            {"type":"code","content":"Se quiere saber si el doble de 10 es menor a la mitad de 34\n( 2 * 10 ) < ( 34 / 2 ) = V , el resultado es F"},
+                            { "type": "paragraph", "content": "Ahora queda claro que primero deben resolverse las operaicones aritmeticas y luego las logicas\nLa utilizacion de parentesis permite realizar encadenamiento de operaciones mas complejas\nPor ejemplo"},
+                            {"type":"code", "content":"Se quiere saber si dos valores son V o si es V la negacion de un tercero o el valor de un cuarto\n( F & V ) | ( ( ~ V ) | V ), el resultado es V"},
+                            {"type":"secondarySubtitle", "content":"Operador :"},
+                            { "type": "paragraph", "content": "El : se utiliza para decir que x variable sera de cierto tipo" },
+                            {"type":"table", "content":[["Utilizacion"],["(nombre variable) : (tipo de dato)"]]},
+                            {"type":"code", "content":"num: numero; cond: boolean;"}
+                    ]
+                    }
+                ]
+        },
     {
         "type": "title",
         "content": "Variables",
@@ -294,6 +310,14 @@
         ]
     },
     {
+        "type":"title", "content":"Estructura del programa",
+        "elements":[
+            {"type":"paragraph", "content":"La estructura basica de un programa consiste de las siguientes secciones"},
+            {"type":"code", "content":"programa\nprocesos ( no necesaria )\nareas\nrobots\nvariables\ncomenzar\nfin"},
+            {"type":"paragraph", "content":"Las funciones de cada seccion se detallan a continuacion"}
+        ]
+    },
+    {
         "type":"title", "content":"Secciones",
         "elements":[
             {"type":"paragraph", "content":"Un programa en este lenguage se constituye de secciones ( detalladas a continuacion ) que se encargan cada una de definir un aspecto del programa\nEstas se dividen en"},
@@ -316,9 +340,22 @@
                     {"type":"paragraph","content":"Esta es la seccion donde se crean modulos, estos pueden tener o no parametros\nEstructura"},
                     {"type":"code", "content":"procesos\n   proceso nombreDelModulo( parametros )\n declaracion de variables locales al modulo\ncomenzar\n  algoritmo que realiza el modulo\nfin"},
                     {"type":"paragraph","content":"El nombreDelModulo es lo que permite el llamado al modulo, en otras palabras lo que permite que se ejecute el codigo dentro de este\nPara una comunicacion de datos entre el algoritmo del modulo y el lugar donde se lo llama se utilizan los parametros\nPara una comunicacion de datos entre el algoritmo del modulo y el lugar donde se lo llama se utilizan los parametros\n"},
-                    {"type":"list", "content":["Letras minusculas y MAYUSCULAS","Numeros","Guiones medios '-' y bajos '_'"]},
-                    {"type":"paragraph","content":"Ejemplo de uso"},
-                    {"type":"code", "content":"programa ejercicio_1\nprograma TP1-E3"}
+                    {"type":"secondarySubtitle", "content":"Parametos formales"},
+                    {"type":"paragraph","content":"Un parametro formal tiene la siguiente declaracion"},
+                    {"type":"code", "content":" tipoDeParametro nombreDelParametro : tipoDeDato\n"},
+                    {"type":"paragraph","content":"Un parametro formal tiene la siguiente declaracion"}, 
+                    {"type":"list", "content":["E: Entrada", "ES: Estrada y Salida"]},
+                    {"type":"paragraph","content":"Tipo E\nEl tipo E significa que el parametro solo es para comunicar informacion hacia el modulo"},
+                    {"type":"paragraph","content":"Tipo ES\nEl tipo ES significa que el parametro es para comunicar informacion con hacia el modulo y a su vez devolver informacion hacia el exterior del modulo"},
+                    {"type":"paragraph","content":"El nombre del parametro funcion como una variable en la cual se carga el valor dado en el llamado y/o se devuelve el valor al llamado\nEl tipo de dato define el tipo de variable\nSi el modulo requiere mas de un parametro, estos se separan con ' ; '"},
+                    
+                    {"type":"secondarySubtitle", "content":"Parametos Actuales"},
+                    {"type":"paragraph","content":"Los parametros actuales son los que envian la informacion hacia el modulo y/o reciben la informacion que este devuelva\nEn el caso que el parametro formal sea de tipo E, el actual correspondiente puede ser bien un valor explicito o una variable\nEn el caso que el parametro formal sea de tipo ES, el actual correspondiente solo puede ser una variable ya que en ella se guarda la devolucion del modulo\nSi el modulo tiene mas de un parametro, estos se separan con ' , '"},
+
+                    {"type":"paragraph","content":"Los parametros formales y actuales se vinculan por la posicion, en otras palabras el primer formal con el primer actual y asi con los sucesibos\nEn el llamado al modulo debe existir igual cantidad de parametros que en la creacion de este y los tipos de datos que representa cada uno debe corresponder con su correspondiente en terminos de posiciones\nEjemplo de uso:   "},
+                    {"type":"code", "content":" procesos\n  proceso sumarEsquinasVaciasCalle( ES cantidad: numero )\n   variables\n     aux: numero\n   comenzar\n      aux:= 0\n       si ( ~( HayFlorEnLaEsquina | HayPapelEnLaEsquina ) )\n              aux:= aux +1\n          repetir 99\n                mover\n             si ( ~( HayFlorEnLaEsquina | HayPapelEnLaEsquina ) )\n              aux:= aux +1\n          cantidad:= cantidad + aux\n     fin\n    proceso calcularMaximo( E n: numero; ES max: numero )\n    comenzar\n   si ( n > max )\n     max:= n\n   fin\n      proceso hacerCuadrado3\n       comenzar\n              repetir 4\n          repetir 3\n                mover\n             derecha\n             fin"}, 
+                    {"type":"paragraph","content":"Dentro de un modulo puede llamarse a otros modulos, de esta manera se produce un anidamiento de modulos que es positivo siempre y cuando se consiga una separacion de tareas que aumente la legibilidad y reusabilidad del codigo\nEjemplo de uso"},
+                    {"type":"code", "content":" procesos\nproceso juntarFlores\ncomenzar\nmientras HayFlorEnLaEsquina\ntomarFlor\nfin\nproceso recorrerCalles( E cantCalles: numero )\nvariables\nsigCa, i: numero\nrepetir cantCalles\ni:= i +1\nrepetir 99\njuntarFlores\nmover\njuntarFlores\nsi ( i < cantCalles )\nsigCa:= sigCa +1\nPos( 1, sigCa)\nfin"}
                 ]
             },
             {
