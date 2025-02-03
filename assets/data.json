@@ -1,5 +1,12 @@
 [
-        {
+    {
+        "type": "title",
+        "content": "Introduccion",
+        "elements": [
+            { "type": "paragraph", "content": "Este no es el sitio web oficial de R-Info, sino un recurso creado para ayudar a los ingresantes y estudiantes de primer año de la Facultad de Informática de la UNLP. Espero que les sea útil y agradezco cualquier sugerencia o comentario." }
+        ]
+    },    
+    {
             "type": "title",
             "content": "Que es R-Info?",
             "elements": [
@@ -151,11 +158,7 @@
                         { "type": "paragraph", "content": "Los parentesis son de gran importancia ya que permiten denotar prioridad a la hora de la resolucion de un encadenamiento de operaciones, como se bio anteriormente en determinadas circunstancias es necesario indicar la prioridad para una correcta operacion y tambien para evitar confusiones\nReestructuracion de ejemplo previo" },
                             {"type":"code","content":"Se quiere saber si el doble de 10 es menor a la mitad de 34\n( 2 * 10 ) < ( 34 / 2 ) = V , el resultado es F"},
                             { "type": "paragraph", "content": "Ahora queda claro que primero deben resolverse las operaicones aritmeticas y luego las logicas\nLa utilizacion de parentesis permite realizar encadenamiento de operaciones mas complejas\nPor ejemplo"},
-                            {"type":"code", "content":"Se quiere saber si dos valores son V o si es V la negacion de un tercero o el valor de un cuarto\n( F & V ) | ( ( ~ V ) | V ), el resultado es V"},
-                            {"type":"secondarySubtitle", "content":"Operador :"},
-                            { "type": "paragraph", "content": "El : se utiliza para decir que x variable sera de cierto tipo" },
-                            {"type":"table", "content":[["Utilizacion"],["(nombre variable) : (tipo de dato)"]]},
-                            {"type":"code", "content":"num: numero; cond: boolean;"}
+                            {"type":"code", "content":"Se quiere saber si dos valores son V o si es V la negacion de un tercero o el valor de un cuarto\n( F & V ) | ( ( ~ V ) | V ), el resultado es V"}
                     ]
                     }
                 ]
@@ -172,26 +175,21 @@
                 {"type":"paragraph","content":"La creacion de la variable sigue la siguiente estructura"},
                 {"type":"code","content":"variables\n   nombreDeLaVariable : tipoDeVariable"},
                 {"type":"paragraph","content":"Se pueden crear la cantidad que se necesiten"},
-                {"type":"code","content":"variables\n   nombre1 : tipo1\nnombre2 : tipo2\nnombre3 : tipo3\nnombre4 : tipo4\n"},
+                {"type":"code","content":"variables\n   nombre1 : tipo1\n   nombre2 : tipo2\n   nombre3 : tipo3\n   nombre4 : tipo4\n"},
                 {"type":"paragraph","content":"Si son del mismo tipo pueden declararse juntas separadas por una ','"},
-                {"type":"code","content":"variables\n   nombre1, nombre4 : tipo1\nnombre2, nombre3 : tipo2"}
+                {"type":"code","content":"variables\n   nombre1, nombre4 : tipo1\n   nombre2, nombre3 : tipo2"}
             ]
             },
             {"type":"subtitle","content":"Operaciones", "elements":[
                 {"type":"paragraph", "content":"Como se definio previamente las variables representan valores por lo tanto existen las operaciones que definimos tambien previamente\nBasicamente las operaciones con variables se dividne en dos grandes grupos, las que involucran lectura de una variable o por el otro las que involucran escritura a una variable"},
-                {"type":"list", "content":["numero: para representar numeros enteros", "boolean: para representar valores logicos (V o F)"]},
-                {"type":"paragraph","content":"La creacion de la variable sigue la siguiente estructura"},
-                {"type":"code","content":"variables\n   nombreDeLaVariable : tipoDeVariable"},
-                {"type":"paragraph","content":"Se pueden crear la cantidad que se necesiten"},
-                {"type":"code","content":"variables\n   nombre1 : tipo1\nnombre2 : tipo2\nnombre3 : tipo3\nnombre4 : tipo4\n"},
-                {"type":"paragraph","content":"Si son del mismo tipo pueden declararse juntas separadas por una ','"},
-                {"type":"code","content":"variables\n   nombre1, nombre4 : tipo1\nnombre2, nombre3 : tipo2"},
-                {"type":"secondarySubtitle", "content":"Escritura"},
-                {"type":"paragraph","content":"Para la escritura de un valor en una variable se debe poner la variable a escribir o reescribir su valor luego la sintaxis de asignacion ( := ) y a continuacion el valor explicito o las operaciones que den como resultado un valor, siempre respetando los tipos de dato"},
-                {"type":"code","content":"Por ejemplo: \n\nSi se quiere guardar en la variable resultado el doble de una variable, lo que se debe hacer es\n\n    resultado := 2 * ( nombreDeLaVariable )\n\no bien como la multiplicacion es distributiva\n\n    resultado := ( nombreDeLaVariable ) * 2\n\nSi se quiere guardar el valor opuesto a la verificacion de si una variable numerica es mayor o igual a otra, lo que se debe hacer es\n\n validacionOpuesta := ~ ( n1 >= n2 )\n\no bien como la multiplicacion es distributiva\n\n    resultado := ( nombreDeLaVariable ) * 2"},
+
                 {"type":"secondarySubtitle", "content":"Lectura"},
-                {"type":"paragraph","content":"Para la utilizacion de el valor que representa una variable es tan sencillo como poner el nombre de variable en el lugar donde corresponderia que este el valor que esta representa"},
-                {"type":"code","content":"Por ejemplo: \n\n   Si se quiere sumar dos numeros, siendo uno la variable num1 y otro la variable num 2 lo que se debe hacer es\n\n  num1 + num2\n\nOtro ejemplo:\n\nSi se quiere asegurar que dos variables booleanas, siendo una estado1 y otra estado2, sean verdaderas lo que se debe hacer es\n\nestado1 & estado2"}
+                {"type":"paragraph", "content":"Para la utilizacion de el valor que representa una variable es tan sencillo como poner el nombre de variable en el lugar donde corresponderia que este el valor que esta representa"},
+                {"type":"code","content":"Por ejemplo: \n\n   Si se quiere sumar dos numeros, siendo uno la variable num1 y otro la variable num 2 lo que se debe hacer es\n\n    num1 + num2 \n\nOtro ejemplo: \n\n   Si se quiere asegurar que dos variables booleanas, siendo una estado1 y otra estado2, sean verdaderas lo que se debe hacer es\n\n    estado1 & estado2"},
+
+                {"type":"secondarySubtitle","content":"Escritura"},
+                {"type":"paragraph","content":"Para la escritura de un valor en una variable se debe poner la variable a escribir o reescribir su valor luego la sintaxis de asignacion ( := ) y a continuacion el valor explicito o las operaciones que den como resultado un valor, siempre respetando los tipos de dato"},
+                {"type":"code","content":"Por ejemplo:\n\n    Si se quiere guardar en la variable resultado el doble de una variable, lo que se debe hacer es\n\n    resultado := 2 * ( nombreDeLaVariable ) o bien como la multiplicacion es distributiva\n\n    resultado := ( nombreDeLaVariable ) * 2 \n\nOtro ejemplo: \n\n    Si se quiere guardar el valor apuesto a la verificacion de si una variable numerica es mayor o igual a otra, lo que se debe hacer es \n\n    validacionOpuesta := ~ ( n1 >= n2 ) o bien se puede descomponer la tarea dos pasos \n\n    validacionOpuesta := ( n1 >= n2 ) \n\n    validacionOpuesta := ~ validacionOpuesta"}
             ]
             }
         ]
@@ -209,30 +207,30 @@
                     {"type":"table", "content":[["sintaxis", "Iterativa"], ["si(condicional/es)","no"],["sino", "no"],["mientras(condicional/es)", "si"],["repetir(numero)", "si"]]},
                     {"type":"secondarySubtitle", "content":"Instruccion si"},
                     {"type":"paragraph", "content":"La instruccion si se utiliza para habilitar o no la ejecucion del bloque de codigo que este identado debajo de esta, este solo se ejecutara si solo si el resultado de la condicion que acompaña al si sea verdadera\nEstructura del si"},
-                    {"type":"code", "content":"si ( condicion )\n   bloque de codigo\n  a ejecutar"},
+                    {"type":"code", "content":"si ( condicion )\n   bloque de codigo\n   a ejecutar"},
                     {"type":"paragraph", "content":"Ejemplo de uso del si es guardar el maximo entre dos numeros"},
-                    {"type":"code", "content":"si (n1>n2)\n max:= n1\nsi (n1<n2)\n max:= n2\n"},
+                    {"type":"code", "content":"si (n1>n2)\n    max:= n1\nsi (n1<n2)\n    max:= n2\n"},
                     {"type":"secondarySubtitle", "content":"Instruccion sino"},
                     {"type":"paragraph", "content":"La instruccion sino solo se puede utilizar si previamente existe una instruccion si, ya que esta actua en consecuencia del si. El sino se utiliza para habilitar la ejecucion del bloque de codigo que este identado debajo de este si solo si la condicion que evalua el si dio falsa\nEstructura del sino"},
                     {"type":"code", "content":"si ( condicion )\n   bloque de codigo\n  a ejecutar\nsino ( condicion )\n   bloque de codigo\n  a ejecutar"},
                     {"type":"paragraph", "content":"Optimizando el maximo entre dos numeros"},
-                    {"type":"code", "content":"si (n1>n2)\n max:= n1\nsino\n max:= n2\n"},
+                    {"type":"code", "content":"si (n1>n2)\n    max:= n1\nsino\n    max:= n2\n"},
                     {"type":"paragraph", "content":"No hace falta verificar si n2 es mayor a n1 ya que la primera condicion de dar falso significa que n2 es igual o mayor a n1, en el caso de no querer escribir en max un valor si n1 = n2, entonces se puede usar otro si"},
-                    {"type":"code", "content":"si (n1>n2)\n max:= n1\nsino\n si(n2>n1)\n    max:= n2"},
+                    {"type":"code", "content":"si (n1>n2)\n    max:= n1\nsino\n    si(n2>n1)\n       max:= n2"},
                     {"type":"paragraph", "content":"Otra variante del mismo efecto"},
-                    {"type":"code", "content":"si (n1>n2)\n max:= n1\nsino\n si(n2<>n1)\n    max:= n2"},
+                    {"type":"code", "content":"si (n1>n2)\n    max:= n1\nsino\n    si(n2<>n1)\n       max:= n2"},
 
                     {"type":"secondarySubtitle", "content":"Instruccion mientras"},
                     {"type":"paragraph", "content":"La instruccion mientras se utiliza para ejecutar cierto bloque de codigo que este identado debajo de esta tantas veces como la condicion que evalua el mientras de verdad, en caso contrario no ejecuta el codigo y sigue con lo que este por fuera\nEstructura del mientras"},
                     {"type":"code", "content":"mientras ( cantidad )\n   bloque de codigo\n  a ejecutar"},
                     {"type":"paragraph", "content":"Un ejemplo es multiplicar un numero por si mismo mientras no supere un maximo o se multiplique un maximo de 5 veces"},
-                    {"type":"code", "content":"mientras ((n1<max) | (cont < 5))\n n:= n*n\n  cont:= cont+1"},
+                    {"type":"code", "content":"mientras ((n1<max) | (cont < 5))\n    n:= n*n\n    cont:= cont+1"},
 
                     {"type":"secondarySubtitle", "content":"Instruccion repetir"},
                     {"type":"paragraph", "content":"La instruccion repetir se utiliza para ejecutar cierto bloque de codigo que este identado debajo de esta tantas veces como lo indique la variable o valor explicito que presigue a la instruccion\nEstructura del repetir"},
                     {"type":"code", "content":"repetir ( cantidad )\n   bloque de codigo\n  a ejecutar"},
                     {"type":"paragraph", "content":"Un ejemplo es calcular la potencia de cierto numero"},
-                    {"type":"code", "content":"repetir (exponente)\n res:= res*base"}
+                    {"type":"code", "content":"repetir (exponente)\n    res:= res*base"}
                 ]
             },
             {"type":"subtitle",
@@ -313,7 +311,7 @@
         "type":"title", "content":"Estructura del programa",
         "elements":[
             {"type":"paragraph", "content":"La estructura basica de un programa consiste de las siguientes secciones"},
-            {"type":"code", "content":"programa\nprocesos ( no necesaria )\nareas\nrobots\nvariables\ncomenzar\nfin"},
+            {"type":"code", "content":"programa\n\nprocesos ( no necesaria )\n\nareas\n\nrobots\n\nvariables\n\ncomenzar\n\nfin"},
             {"type":"paragraph", "content":"Las funciones de cada seccion se detallan a continuacion"}
         ]
     },
@@ -338,7 +336,7 @@
                 "type":"subtitle", "content":"Procesos",
                 "elements":[
                     {"type":"paragraph","content":"Esta es la seccion donde se crean modulos, estos pueden tener o no parametros\nEstructura"},
-                    {"type":"code", "content":"procesos\n   proceso nombreDelModulo( parametros )\n declaracion de variables locales al modulo\ncomenzar\n  algoritmo que realiza el modulo\nfin"},
+                    {"type":"code", "content":"procesos\n    proceso nombreDelModulo( parametros )\n\n    variables \n        declaracion de variables locales al modulo\n\n    comenzar\n        algoritmo que realiza el modulo\n    fin"},
                     {"type":"paragraph","content":"El nombreDelModulo es lo que permite el llamado al modulo, en otras palabras lo que permite que se ejecute el codigo dentro de este\nPara una comunicacion de datos entre el algoritmo del modulo y el lugar donde se lo llama se utilizan los parametros\nPara una comunicacion de datos entre el algoritmo del modulo y el lugar donde se lo llama se utilizan los parametros\n"},
                     {"type":"secondarySubtitle", "content":"Parametos formales"},
                     {"type":"paragraph","content":"Un parametro formal tiene la siguiente declaracion"},
@@ -353,9 +351,9 @@
                     {"type":"paragraph","content":"Los parametros actuales son los que envian la informacion hacia el modulo y/o reciben la informacion que este devuelva\nEn el caso que el parametro formal sea de tipo E, el actual correspondiente puede ser bien un valor explicito o una variable\nEn el caso que el parametro formal sea de tipo ES, el actual correspondiente solo puede ser una variable ya que en ella se guarda la devolucion del modulo\nSi el modulo tiene mas de un parametro, estos se separan con ' , '"},
 
                     {"type":"paragraph","content":"Los parametros formales y actuales se vinculan por la posicion, en otras palabras el primer formal con el primer actual y asi con los sucesibos\nEn el llamado al modulo debe existir igual cantidad de parametros que en la creacion de este y los tipos de datos que representa cada uno debe corresponder con su correspondiente en terminos de posiciones\nEjemplo de uso:   "},
-                    {"type":"code", "content":" procesos\n  proceso sumarEsquinasVaciasCalle( ES cantidad: numero )\n   variables\n     aux: numero\n   comenzar\n      aux:= 0\n       si ( ~( HayFlorEnLaEsquina | HayPapelEnLaEsquina ) )\n              aux:= aux +1\n          repetir 99\n                mover\n             si ( ~( HayFlorEnLaEsquina | HayPapelEnLaEsquina ) )\n              aux:= aux +1\n          cantidad:= cantidad + aux\n     fin\n    proceso calcularMaximo( E n: numero; ES max: numero )\n    comenzar\n   si ( n > max )\n     max:= n\n   fin\n      proceso hacerCuadrado3\n       comenzar\n              repetir 4\n          repetir 3\n                mover\n             derecha\n             fin"}, 
+                    {"type":"code", "content":" procesos\n    proceso sumarEsquinasVaciasCalle( ES cantidad: numero )\n    variables\n        aux: numero\n    comenzar\n        aux:= 0\n        si ( ~( HayFlorEnLaEsquina |  HayPapelEnLaEsquina ) )\n            aux:= aux +1\n        repetir 99\n            mover\n            si ( ~( HayFlorEnLaEsquina | HayPapelEnLaEsquina ) )\n               aux:= aux +1\n        cantidad:= cantidad + aux\n    fin\n\n    proceso calcularMaximo( E n: numero; ES max: numero )\n    comenzar\n        si ( n > max )\n            max:= n\n    fin\n    proceso hacerCuadrado3\n    comenzar\n        repetir 4\n            repetir 3\n                mover\n             derecha\n     fin"}, 
                     {"type":"paragraph","content":"Dentro de un modulo puede llamarse a otros modulos, de esta manera se produce un anidamiento de modulos que es positivo siempre y cuando se consiga una separacion de tareas que aumente la legibilidad y reusabilidad del codigo\nEjemplo de uso"},
-                    {"type":"code", "content":" procesos\nproceso juntarFlores\ncomenzar\nmientras HayFlorEnLaEsquina\ntomarFlor\nfin\nproceso recorrerCalles( E cantCalles: numero )\nvariables\nsigCa, i: numero\nrepetir cantCalles\ni:= i +1\nrepetir 99\njuntarFlores\nmover\njuntarFlores\nsi ( i < cantCalles )\nsigCa:= sigCa +1\nPos( 1, sigCa)\nfin"}
+                    {"type":"code", "content":"procesos\n    proceso juntarFlores\n    comenzar\n        mientras HayFlorEnLaEsquina\n            tomarFlor\n    fin\n    proceso recorrerCalles( E cantCalles: numero )\n    variables\n        sigCa, i: numero\n    comenzar\n        sigCa:=0\n        i:=0\n        repetir cantCalles\n            i:= i +1\n            repetir 99\n                juntarFlores\n                mover\n            juntarFlores\n            si ( i < cantCalles )\n                sigCa:= sigCa +1\n                Pos( 1, sigCa)\n    fin"}
                 ]
             },
             {
@@ -377,34 +375,34 @@
                     {"type":"paragraph", "content":"En ambos casos la avenida y calle estan incluidas en la region\nSe declara de la siguiente manera"},
                     {"type":"code", "content":"( avenidaInicial, calleInicial, avenidaFinal, calleFinal )"},
                     {"type":"paragraph", "content":"Ejemplo de uso"},
-                    {"type":"code", "content":"areas\n  area1 : AreaC( 1, 1, 1, 1 )\n   zonaPrivada : AreaP( 11, 1, 100, 10 )\n areaTrabajo : AreaPC( 50, 50, 55, 60 )"}
+                    {"type":"code", "content":"areas\n    area1 : AreaC( 1, 1, 1, 1 )\n    zonaPrivada : AreaP( 11, 1, 100, 10 )\n    areaTrabajo : AreaPC( 50, 50, 55, 60 )"}
                 ]
             },
             {
                 "type":"subtitle", "content":"Robots",
                 "elements":[
                     {"type":"paragraph","content":"Esta es la seccion donde se definene los algoritmos que un cierto tipo de robot tendra que hacer durante la ejecucion del programa\nEstructura"},
-                    {"type":"code", "content":"robots\n robot nombreTipoRobot\n variables\n     en el caso\n        de que se necesiten\n   comenzar\n      instrucciones que componen\n        el algoritmo para este tipo de robot\n  fin"},
+                    {"type":"code", "content":"robots\n    robot nombreTipoRobot\nvariables\n     en el caso de que se necesiten\ncomenzar\n     instrucciones que componen el algoritmo para este tipo de robot\nfin"},
                     {"type":"paragraph","content":"Cuando se declara el tipo de robot la seccion de variables solo debe ser agregada en el caso que el robot necesite variables numericas y/o booleanas de lo contrario no es necesario que este\nEn el apartado comenzar ... fin es similar a el comenzar ... fin de la seccion de procesos ya que es donde se crea el algoritmo del robot el cual al momento d ela ejecucion del programa se usara para que el robot realize tareas como moverse, interactuar con el mapa, realizar operaciones aritmeticas/logicas, comunicacion entre otras\nNormalmente un tipo de robot se define para un labor especifica que puede englobar tareas asociadas a esta labor, si se quiere hacer un uso optimo de los tipos de robot se descompone el problema en labores y se las asigna a diferentes robots para distribuir la carga de manera que se responda a la problematica de manera eficiente\nEjemplo de uso"},
-                    {"type":"code", "content":"robots\n robot corredorAvenida\n comenzar\n      mientras (PosCa < 100)\n            mover\n     Informar('LlegueALaCalle',100)\n    fin\n   robot contadorFlores\n  variables\n     flores: numero\n    comenzar\n      flores:= 0\n        repetir 9\n         repetir 15\n                juntarFlores(flores)\n              mover\n         juntarFlores(flores)\n          Pos(PosAv + 1, 1)\n     fin"}
+                    {"type":"code", "content":"robots\n    robot corredorAvenida\n    comenzar\n        mientras (PosCa < 100)\n            mover\n        Informar('LlegueALaCalle',100)\n    fin\n    robot contadorFlores\n    variables\n        flores: numero\n    comenzar\n        flores:= 0\n        repetir 9\n            repetir 15\n                juntarFlores(flores)\n                mover\n            juntarFlores(flores)\n            Pos(PosAv + 1, 1)\n     fin"}
                 ]
             },
             {
                 "type":"subtitle", "content":"Variables",
                 "elements":[
                     {"type":"paragraph","content":"Esta es la seccion donde se declaran las variables robot de un determinado tipo de robot cada una\nLas variables robot son las que se encargan de ejecutar los algoritmos que se definen en el programa\nEstructura"},
-                    {"type":"code", "content":"variables\n  nombreVariableRobot: nombreTipoRobot"},
+                    {"type":"code", "content":"variables\n    ombreVariableRobot: nombreTipoRobot"},
                     {"type":"paragraph","content":"El nombreVariableRobot es el nombre que tendra el robot durante la ejecucion\nEl nombreTipoRobot es el nombre con el cual se definio un tipo de robot en la seccion de robots\nEjemplo de uso"},
-                    {"type":"code", "content":"variables\n  robot1: trabajador\n    padre: recolector\n    rJefe: coordinador"}
+                    {"type":"code", "content":"variables\n    robot1: trabajador\n    padre: recolector\n    rJefe: coordinador"}
                 ]
             },
             {
                 "type":"subtitle", "content":"Comenzar y Fin",
                 "elements":[
                     {"type":"paragraph","content":"Esta es la seccion donde se le asignan las areas correspondientes a cada variable robot y ademas su correspondiente posicionamiento inicial en el mapa\nEstructura"},
-                    {"type":"code", "content":"comenzar\n   AsignarArea( nombreVariableRobot, nombreArea )\n    Iniciar( nombreVariableRobot, avenida, calle )\nfin"},
+                    {"type":"code", "content":"comenzar\n    AsignarArea( nombreVariableRobot, nombreArea )\n    Iniciar( nombreVariableRobot, avenida, calle )\nfin"},
                     {"type":"paragraph","content":"A una variable robot se le pueden asignar multiples areas (siempre y cuando se respete el tipo de area definido) pero unicamente se incia en un punto del mapa\nEjemplo de uso:"},
-                    {"type":"code", "content":"comenzar\n  AsignarArea( robot4, cuadrante )\n    AsignarArea( robot4, puntoPartida )\n    AsignarArea( jefe, areaJefe )\n  Iniciar( jefe, 1, 1 )\n    Iniciar( robot4, 50, 1 )\nfin"}
+                    {"type":"code", "content":"comenzar\n    AsignarArea( robot4, cuadrante )\n    AsignarArea( robot4, puntoPartida )\n    AsignarArea( jefe, areaJefe )\n    Iniciar( jefe, 1, 1 )\n    Iniciar( robot4, 50, 1 )\nfin"}
                 ]
             }
         ]
